@@ -434,6 +434,10 @@ a {
   justify-content: space-between;
 }
 
+.column {
+  flex-direction: column;
+}
+
 
 
 /*---------------------- Margin -------------------------*/
