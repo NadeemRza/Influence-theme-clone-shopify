@@ -465,6 +465,11 @@ a {
   margin-top: 1rem;
 }
 
+/*----------------------Image Alignment-------------------------*/
+.img-right{
+  flex-direction: row-reverse;
+}
+
 
 /*----------------------Flickity-------------------------*/
 /*! Flickity v2.3.0

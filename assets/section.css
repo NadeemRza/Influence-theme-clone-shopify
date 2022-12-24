@@ -68,3 +68,39 @@
     margin: 0.2rem 0;
   }
 }
+
+
+/*******************Image With Text Section 2**********************/
+.flex-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.flexbox_item{
+  width: 100%;
+}
+
+.image-text__content{
+  padding: 30px 0 0;
+}
+
+.image-text__caption {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 990px) {
+  .flexbox_item{
+      width: 50%;
+  }
+  .right-align{
+      flex-direction: row-reverse;
+  }
+  .image-text__content{
+      padding: 30px;
+  }
+}

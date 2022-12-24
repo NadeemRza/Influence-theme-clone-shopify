@@ -1,0 +1,181 @@
+<div class="image-with-text__container">
+  <div class="image-with-text__main-container" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    {% for block in section.blocks %}
+      <div class="image-with-text__container">
+        <div class="flex-box align-center {{block.image_position}} content-background">
+          <div class="flexbox_item">
+            <div class="image-text_image">
+              {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
+              {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+            </div>
+          </div>
+          <div class="flexbox_item center-align">
+            <div class="image-text__content {{block.settings.text_alignment}}">
+              {% if block.settings.caption_text != blank %}
+                <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
+              {% endif %}
+
+              {% if block.settings.heading_text != blank %}
+                <h1 class="image-text__heading pt-2 heading-{{block.id}}">{{ block.settings.heading_text }}</h1>
+              {% endif %}
+
+              {% if block.settings.button_link != blank or block.settings.button_text != blank %}
+                <div class="image-text__button pt-2">
+                  <a class="button button--primary button-{{block.id}}" href="{{block.settings.button_link}}">
+                    {{ block.settings.button_text }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% style %}
+  .content-background {
+    background-color: {{ section.settings.content_background_color}}
+    ;
+  }
+
+  {% for block in section.blocks %}
+    .caption-heading-{{ block.id}}{
+      color: {{ block.settings.caption_text_color}}
+      ;
+    }
+
+    .heading-{{ block.id}}{
+      color: {{ block.settings.heading_text_color}}
+      ;
+    }
+
+    .button-{{ block.id}}{
+      background-color: {{ block.settings.button_background_color}}
+      ;
+      color: {{ block.settings.button_text_color}}
+      ;
+      font-weight: semi-bold;
+    }
+  {% endfor %}
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "image with text new",
+    "tag": "section",
+    "class": "homepage section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "content_background_color",
+        "label": "Content Background Color",
+        "default": "#ecf1f5"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "content blocks",
+        "type": "content_blocks",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "select",
+            "id": "image_position",
+            "label": "Image Position",
+            "options": [
+              {
+                "value": "img-left",
+                "label": "Left"
+              }, {
+                "value": "img-right",
+                "label": "Right"
+              }
+            ],
+            "default": "img-left"
+          }, {
+            "type": "header",
+            "content": "Content Settings"
+          }, {
+            "type": "text",
+            "id": "caption_text",
+            "label": "Caption Text",
+            "default": "MAKE A STATEMENT"
+          }, {
+            "type": "color",
+            "id": "caption_text_color",
+            "label": "Caption Text color",
+            "default": "#271e0a"
+          }, {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text",
+            "default": "SHOP OUR NEW UTILITARIAN STYLE"
+          }, {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Heading Text color",
+            "default": "#271e0a"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Text",
+            "default": "SHOP NOW"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }, {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button Background color",
+            "default": "#271e0a"
+          }, {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text color",
+            "default": "#fff"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text Alignment",
+            "options": [
+              {
+                "value": "text-left",
+                "label": "Left"
+              }, {
+                "value": "text-center",
+                "label": "Center"
+              }, {
+                "value": "text-right",
+                "label": "Right"
+              }
+            ],
+            "default": "text-center"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "image with text new"
+      }
+    ]
+  }
+{% endschema %}
