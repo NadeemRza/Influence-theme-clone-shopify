@@ -1,0 +1,74 @@
+{% if section.settings.collection_id != blank %}
+  <div class="page-width featured-collection">
+    <div class="featured-collection__heading h2 heading1">Best Selling Dresses</div>
+    <div class="grid grid--1-col grid--4-col-desktop">
+      {% assign product_limit = section.settings.product_limit %}
+      {% for product in section.settings.collection_id.products %}
+        <div class="grid__item featured-collection__content">
+          <div class="featured-collection__card">
+            {% render 'product-card', product: product %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% style %}
+  .heading1 {
+    color: {{ section.settings.heading_text_color}}
+    ;
+    text-align: {{ section.settings.heading_position}}
+    ;
+  }
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "Featured-Collection",
+    "class": "Featured-Collection",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "collection_id",
+        "label": "Collection"
+      }, {
+        "type": "range",
+        "id": "product_limit",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "Product Limit",
+        "default": 8
+      }, {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading Color",
+        "default": "#000"
+      }, {
+        "type": "select",
+        "id": "heading_position",
+        "label": "Heading position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured collection"
+      }
+    ]
+  }
+{% endschema %}

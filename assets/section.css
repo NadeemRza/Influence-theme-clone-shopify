@@ -19,3 +19,17 @@
   .height-full{
     height: 100%;
   }
+
+/***********************Featured Collection Section******************/
+.featured-collection{
+  margin-bottom: 500px;
+}
+
+/* .featured-collection__card{
+  margin: 0 0.75rem;
+} */
+
+.featured-collection__content{
+  margin-top: 1rem;
+  /* background-color: #f1ecec; */
+}
