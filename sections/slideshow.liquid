@@ -1,0 +1,220 @@
+<div class="slideshow">
+  <div class="slideshow__wrapper" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    {% for block in section.blocks %}
+      <div class="slideshow__item">
+        <div>
+          {% assign mobile_image = block.settings.image_mobile | default: blocks.settings.image %}
+          {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+        </div>
+        <div class="slideshow__content">
+          <div class="flex height-full page-width {{ block.settings.content_position}} mb-10">
+            <div class="max-width {{ block.settings.text_alignment }}">
+              <h3 class="heading-{{block.id }}">{{ block.settings.heading_text }}</h3>
+              <h1 class="para-{{block.id }}">{{ block.settings.para_text }}</h1>
+              <div>
+                {% if block.settings.button_text_1 != blank and block.settings.button_link_1 != blank %}
+                  <a>
+                    <button class="button-{{ block.id }}-1">{{ block.settings.button_text_1 }}</button>
+                  </a>
+                {% endif %}
+                {% if block.settings.button_text_2 != blank and block.settings.button_link_2 != blank %}
+                  <a>
+                    <button class="button-{{ block.id }}-2">{{ block.settings.button_text_2 }}</button>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% style %}
+  {% for block in section.blocks %}
+    .heading-{{ block.id}}{
+      color: {{ block.settings.heading_text_color}}
+      ;
+    }
+    .para-{{ block.id}}{
+      color: {{ block.settings.para_text_color}}
+      ;
+    }
+    .button-{{ block.id}}-1 {
+      background-color: {{ block.settings.button_bcg_color_1}}
+      ;
+      color: {{ block.settings.button_text_color_1}}
+      ;
+      border: none;
+      border-radius: 0.2rem;
+      padding: 0.5rem 1.2rem;
+      font-weight: bold;
+      bodrer-left: 1px solid #ffff;
+      border-top: 2px solid #ffff;
+    }
+    .button-{{ block.id}}-2 {
+      background-color: {{ block.settings.button_bcg_color_2}}
+      ;
+      color: {{ block.settings.button_text_color_2}}
+      ;
+      border: none;
+      border: 1px solid #fff;
+      border-radius: 0.2rem;
+      padding: 0.5rem 1.5rem 0.4rem;
+      margin-left: 1.5rem;
+    }
+
+  {% endfor %}
+{% endstyle %}
+
+
+
+{% schema %}
+  {
+    "name": "slideshow",
+    "tag": "section",
+    "class": "slideshow",
+    "max_blocks": 6,
+    "blocks": [
+      {
+        "type": "slideshow-block",
+        "name": "slideshow-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading Text",
+            "default": "NEW BASICS"
+          },
+          {
+            "type": "color",
+            "id": "heading_text_color",
+            "label": "Heading Color",
+            "default": "#fff"
+          }, {
+            "type": "text",
+            "id": "para_text",
+            "label": "Pragraph Text",
+            "default": "THE ART OF STYLE"
+          }, {
+            "type": "color",
+            "id": "para_text_color",
+            "label": "Para Color",
+            "default": "#fff"
+          }, {
+            "type": "text",
+            "id": "button_text_1",
+            "label": "Button Text 1",
+            "default": "SHOP NEW IN"
+          }, {
+            "type": "url",
+            "id": "button_link_1",
+            "label": "Button URL 1"
+          }, {
+            "type": "color",
+            "id": "button_bcg_color_1",
+            "label": "Button Background Color 1",
+            "default": "#fff"
+          }, {
+            "type": "color",
+            "id": "button_text_color_1",
+            "label": "Button Text Color 1",
+            "default": "#000"
+          }, {
+            "type": "text",
+            "id": "button_text_2",
+            "label": "Button Text 2",
+            "default": "SHOP ALL"
+          }, {
+            "type": "url",
+            "id": "button_link_2",
+            "label": "Button URL"
+          }, {
+            "type": "color",
+            "id": "button_bcg_color_2",
+            "label": "Button Background Color 2",
+            "default": "transparent"
+          }, {
+            "type": "color",
+            "id": "button_text_color_2",
+            "label": "Button Text Color 2",
+            "default": "#fff"
+          }, {
+            "type": "select",
+            "id": "content_position",
+            "label": "Content position",
+            "options": [
+              {
+                "value": "align-start justify-start",
+                "label": "Top left"
+              },
+              {
+                "value": "align-start justify-center",
+                "label": "Top center"
+              },
+              {
+                "value": "align-start justify-end",
+                "label": "Top right"
+              },
+              {
+                "value": "align-center justify-start",
+                "label": "Middle left"
+              }, {
+                "value": "align-center justify-center",
+                "label": "Middle center"
+              }, {
+                "value": "align-center justify-end",
+                "label": "Middle right"
+              }, {
+                "value": "align-end justify-start",
+                "label": "Bottom left"
+              }, {
+                "value": "align-end justify-center",
+                "label": "Bottom center"
+              }, {
+                "value": "align-end justify-end",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "align-end justify-end"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text alignment",
+            "options": [
+              {
+                "value": "text-left",
+                "label": "Left"
+              }, {
+                "value": "text-center",
+                "label": "Center"
+              }, {
+                "value": "text-right",
+                "label": "Right"
+              }
+            ],
+            "default": "text-left"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "slideshow"
+      }
+    ]
+  }
+{% endschema %}
