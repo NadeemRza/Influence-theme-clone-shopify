@@ -4,7 +4,7 @@
     <div class="grid grid--1-col grid--4-col-desktop">
       {% assign product_limit = section.settings.product_limit %}
       {% for product in section.settings.collection_id.products %}
-        <div class="grid__item featured-collection__content">
+        <div class="grid__item featured-collection__content mt-1">
           <div class="featured-collection__card">
             {% render 'product-card', product: product %}
           </div>

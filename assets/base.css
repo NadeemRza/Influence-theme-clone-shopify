@@ -206,6 +206,10 @@ h6,
   border-color: var(--color-border);
 }
 
+a {
+  text-decoration: none;
+}
+
 
 /*---------------------- Grid -------------------------*/
 .grid {
@@ -451,6 +455,10 @@ h6,
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.mt-1 {
+  margin-top: 1rem;
 }
 
 

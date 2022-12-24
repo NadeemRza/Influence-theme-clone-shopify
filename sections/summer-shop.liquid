@@ -1,0 +1,222 @@
+{% if section.blocks.size > 0 %}
+
+  {% if section.settings.heading_text_1 != blank %}
+    <h1 class="block--heading">{{ section.settings.heading_text_1 }}</h1>
+  {% endif %}
+
+  {% if section.settings.heading_text_2 != blank %}
+    <h1 class="block--heading">{{ section.settings.heading_text_2 }}</h1>
+  {% endif %}
+
+  <div class="block-container grid--3-col-desktop mt-1">
+    {% for block in section.blocks %}
+      <div class="summer_shop_container">
+
+        {% if block.settings.image_mobile != blank or block.settings.image != blank %}
+          <div>
+            {% assign mobile_image = block.settings.image_mobile | default: blocks.settings.image %}
+            {% render 'image', class: 'media media--square gap-mobile', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+          </div>
+        {% endif %}
+
+        <div class="summer_shop_items {{section.settings.text_alignment}}">
+          <div class="block-width flex cloumn {{section.settings.content_position}}">
+
+            {% if block.settings.info_text != blank %}
+              <h2 class="info-text-{{block.id}}">{{ block.settings.info_text }}</h2>
+            {% endif %}
+
+            {% if block.settings.button_text != blank or block.settings.button_link != blank %}
+              <a href="button_link">
+                <button class="button button--primary button-{{block.id}}">{{ block.settings.button_text }}</button>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% style %}
+  .block--heading {
+    color: {{ section.settings.block_heading_text_color}}
+    ;
+    font-size: {{ section.settings.block_heading_font_size}}
+    px;
+    width: 100%;
+    text-align: {{ section.settings.heading_text_alignment}}
+    ;
+  }
+
+  {% for block in section.blocks %}
+    .info-text-{{ block.id}}{
+      color: {{ block.settings.info_text_color}}
+    }
+
+    .button-{{ block.id}}{
+      background-color: {{ block.settings.button_background_color}}
+      ;
+      color: {{ block.settings.button_text_color}}
+      ;
+    }
+  {% endfor %}
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "summer_shop",
+    "class": "summer_shop",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "heading_text_1",
+        "label": "Heading Text 1",
+        "default": "SPRING/SUMMER."
+      },
+      {
+        "type": "text",
+        "id": "heading_text_2",
+        "label": "Heading Text 2",
+        "default": "SHOP THE NEW SEASON NOW"
+      },
+      {
+        "type": "select",
+        "id": "heading_text_alignment",
+        "label": "Heading Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }, {
+        "type": "header",
+        "content": "Content"
+      }, {
+        "type": "color",
+        "id": "block_heading_text_color",
+        "label": "Heading Color",
+        "default": "#000"
+      }, {
+        "type": "range",
+        "id": "block_heading_font_size",
+        "min": 20,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Size",
+        "default": 35
+      }, {
+        "type": "select",
+        "id": "content_position",
+        "label": "Content position",
+        "options": [
+          {
+            "value": "align-start justify-start",
+            "label": "Top left"
+          },
+          {
+            "value": "align-center justify-start",
+            "label": "Top center"
+          },
+          {
+            "value": "align-end justify-start",
+            "label": "Top right"
+          },
+          {
+            "value": "align-start justify-center",
+            "label": "Middle left"
+          }, {
+            "value": "align-center justify-center",
+            "label": "Middle center"
+          }, {
+            "value": "align-end justify-center",
+            "label": "Middle right"
+          }, {
+            "value": "align-start justify-end",
+            "label": "Bottom left"
+          }, {
+            "value": "align-center justify-end",
+            "label": "Bottom center"
+          }, {
+            "value": "align-end justify-end",
+            "label": "Bottom right"
+          }
+        ],
+        "default": "align-start justify-start"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "summer_shop_blocks",
+        "type": "summer_shop_blocks",
+        "limit": 6,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "text",
+            "id": "info_text",
+            "label": "Info Text",
+            "default": "BOTTOMS"
+          },
+          {
+            "type": "color",
+            "id": "info_text_color",
+            "label": "Info Text Color",
+            "default": "#fff"
+          }, {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "SHOP NOW"
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button URL"
+          }, {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button Background Color",
+            "default": "#000"
+          }, {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text Color",
+            "default": "#fff"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+
+        "name": "summer_shop"
+      }
+    ]
+  }
+{% endschema %}

@@ -33,3 +33,38 @@
   margin-top: 1rem;
   /* background-color: #f1ecec; */
 }
+
+
+/*******************Summer Shop Section**********************/
+.block-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.summer_shop_container {
+  position: relative;
+}
+
+.summer_shop_items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.block-width {
+  height: 31rem;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 989px) {
+  .block-container {
+    max-width: 95%;
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+  .gap-mobile {
+    margin: 0.2rem 0;
+  }
+}
