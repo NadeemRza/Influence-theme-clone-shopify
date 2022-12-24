@@ -59,6 +59,12 @@
       ;
       color: {{ block.settings.button_text_color}}
       ;
+      border: none;
+    }
+
+    .button-{{ block.id}}:hover  {
+      background-color: transparent;
+      color: #fff;
     }
   {% endfor %}
 {% endstyle %}
@@ -202,12 +208,12 @@
             "type": "color",
             "id": "button_background_color",
             "label": "Button Background Color",
-            "default": "#000"
+            "default": "#fff"
           }, {
             "type": "color",
             "id": "button_text_color",
             "label": "Button Text Color",
-            "default": "#fff"
+            "default": "#000"
           }
         ]
       }
