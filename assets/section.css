@@ -104,3 +104,19 @@
       padding: 30px;
   }
 }
+
+
+/*******************Modern Shop Section**********************/
+.img-text__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.img-text__image {
+  margin: 0 0.25rem;
+}
+
+.img-text__text {
+  text-align: center;
+  padding: 1rem 1.7rem;
+}
