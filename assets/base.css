@@ -465,6 +465,10 @@ a {
   margin-top: 1rem;
 }
 
+.mt-half {
+  margin-top: 0.5rem;
+}
+
 /*----------------------Image Alignment-------------------------*/
 .img-right{
   flex-direction: row-reverse;
