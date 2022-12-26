@@ -188,3 +188,10 @@ a {
     position: relative;
     z-index: 1;
   }
+
+  @media only screen and (max-width: 749px) {
+    .header {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
