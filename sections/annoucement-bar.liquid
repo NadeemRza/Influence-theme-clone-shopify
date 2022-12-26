@@ -1,0 +1,65 @@
+{% if section.settings.annoucement_visibility %}
+  <div class="slider" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    {% for block in section.settings %}
+      <div class="annoucement-bar">
+        <div class="annoucement-bar__container">
+          <div class="annoucement-bar__content flex justify-center align-center">
+            <div class="paragraph-{{ block.id }}">{{ block.settings.annoucement_text }}</div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% style %}
+  .annoucement-bar {
+    background-color: {{ section.settings.background_color}}
+    ;
+  }
+
+  .paragraph-{{ block.id}}{
+    color: {{ section.settings.text_color}}
+    ;
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Annoucement bar",
+    "class": "annoucement-bar",
+    "tag": "header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "annoucement_visibility",
+        "label": "Show Announcement Bar",
+        "default": true
+      }, {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#261d09"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#fff"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "annoucement-block",
+        "name": "Annoucement Block",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "annoucement_text",
+            "label": "Heading Text",
+            "default": "<p>MAKE A STATEMENT</p>"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

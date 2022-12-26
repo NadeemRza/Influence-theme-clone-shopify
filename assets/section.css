@@ -135,3 +135,15 @@
   outline: none;
   border-color: #2c2613;
 }
+
+
+/*******************Annoucement Bar************************/
+.annoucement-bar {
+  width: 100%;
+  padding: 0.75rem 0;
+}
+
+.annoucement-bar__container {
+  text-align: center;
+}
+
