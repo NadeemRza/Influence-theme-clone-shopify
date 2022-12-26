@@ -1,0 +1,88 @@
+<div class="newsletter-container">
+  <h3 class="heading-{{section.id}} mt-1">{{ section.settings.heading_text }}</h3>
+  <h1 class="subheading-{{section.id}} mt-1">{{ section.settings.subheading_text }}</h1>
+  <div class="mt-1">
+    {% form 'customer' %}
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="newsletter-container_input">
+      <button class="button-{{section.id}}">{{ section.settings.button_text }}</button>
+    {% endform %}
+  </div>
+</div>
+
+{% style %}
+  .heading-{{ section.id}}{
+    color: {{ section.settings.heading_text_color}}
+    ;
+  }
+
+  .subheading-{{ section.id}}{
+    color: {{ section.settings.subheading_text_color}}
+    ;
+  }
+
+  .button-{{ section.id}}{
+    background-color: {{ section.settings.button_background_color}}
+    ;
+    color: {{ section.settings.button_text_color}}
+    ;
+    margin-left: -0.3rem;
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Newsletter",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": "SIGN UP NOW"
+      },
+      {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading Text Color",
+        "default": "#2c2613"
+      },
+      {
+        "type": "text",
+        "id": "subheading_text",
+        "label": "Subheading Text",
+        "default": "GET THE NEWSLETTER"
+      },
+      {
+        "type": "color",
+        "id": "subheading_text_color",
+        "label": "Subheading Text Color",
+        "default": "#2c2613"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "SUBSCRIBE"
+      }, {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#2c2613"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter"
+      }
+    ]
+  }
+{% endschema %}

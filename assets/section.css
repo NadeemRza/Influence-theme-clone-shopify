@@ -120,3 +120,18 @@
   text-align: center;
   padding: 1rem 1.7rem;
 }
+
+
+/*******************Newsletter Section************************/
+.newsletter-container{
+  width: 100%;
+  text-align: center;
+  background-color: #ece2cc;
+  padding: 5rem 0;
+}
+
+.newsletter-container_input{
+  background-color: #ece2cc;
+  outline: none;
+  border-color: #2c2613;
+}

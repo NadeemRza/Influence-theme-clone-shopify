@@ -131,6 +131,19 @@ h6,
   }
 }
 
+/***************************Text Helper***************************/
+.capital {
+  text-transform: capitalize;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform:lowercase;
+}
+
 
 /*---------------------- Show or Hide -------------------------*/
 @media screen and (max-width: 749px) {
