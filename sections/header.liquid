@@ -1,0 +1,93 @@
+<div class="header flex align-center">
+  <div class="logo">
+    {% assign mobile_image = section.settings.image_mobile | default: section.settings.image %}
+    {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
+  </div>
+  <div>
+    <ul class="parent flex">
+      {% for link in section.settings.linklist.links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+          {% if link.links != blank %}
+            <ul class="child">
+              {% for child_link in link.links %}
+                <li>
+                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  {% if child_link.links != blank %}
+                    <ul class="grandchild">
+                      {% for grandchild_link in child_link.links %}
+                        <li>
+                          <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <button class="button button--primary button-{{section.id}}">SignIn</button>
+</div>
+
+{% style %}
+  .header {
+    background-color: {{ section.settings.background_color}}
+    ;
+  }
+
+  a {
+    color: {{ section.settings.text_color}}
+    ;
+  }
+
+  .button-{{ section.id}}{
+    border-radius: 1rem;
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "header",
+    "tag": "header",
+    "class": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "1200 x 500px .jpg recommended"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image (Mobile)",
+        "info": "600 x 800px .jpg recommended"
+      },
+      {
+        "type": "link_list",
+        "id": "linklist",
+        "label": "Linklist"
+      }, {
+        "type": "link_list",
+        "id": "linklist_mobile",
+        "label": "Linklist Mobile"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#2f2e21"
+      }
+
+    ]
+  }
+{% endschema %}

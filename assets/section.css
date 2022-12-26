@@ -147,3 +147,44 @@
   text-align: center;
 }
 
+
+/*******************Header************************/
+.header {
+  width: 95vw;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.logo {}
+
+.parent {
+    column-gap: 2rem;
+    font-weight: semi-bold;
+  }
+
+.parent:hover + .child {
+    display: block;
+  }
+
+  .child {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    display: none;
+  }
+
+  .grandchild {
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+  }
