@@ -1,12 +1,33 @@
 {
   "sections": {
-    "main": {
-      "type": "main-skeleton",
+    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd": {
+      "type": "image-with-text-1",
+      "blocks": {
+        "939fe7a5-6276-4d75-ba6e-0dc4b2d403a4": {
+          "type": "content_blocks",
+          "settings": {
+            "image_position": "img-left",
+            "caption_text": "MAKE A STATEMENT",
+            "caption_text_color": "#271e0a",
+            "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#fff",
+            "text_alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "939fe7a5-6276-4d75-ba6e-0dc4b2d403a4"
+      ],
       "settings": {
+        "content_background_color": "#ecf1f5"
       }
     }
   },
   "order": [
-    "main"
+    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd"
   ]
 }
