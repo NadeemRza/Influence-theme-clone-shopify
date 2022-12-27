@@ -16,6 +16,56 @@
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
+    "sections": {
+      "annoucement-bar": {
+        "type": "annoucement-bar",
+        "blocks": {
+          "a0bb6eb7-21af-4278-abef-c3e258618448": {
+            "type": "annoucement-block",
+            "settings": {
+              "annoucement_text": "MAKE A STATEMENT"
+            }
+          },
+          "3c987444-7c62-4ecf-8a96-334388243ea5": {
+            "type": "annoucement-block",
+            "settings": {
+              "annoucement_text": "MAKE A STATEMENT"
+            }
+          }
+        },
+        "block_order": [
+          "a0bb6eb7-21af-4278-abef-c3e258618448",
+          "3c987444-7c62-4ecf-8a96-334388243ea5"
+        ],
+        "settings": {
+          "annoucement_visibility": true,
+          "background_color": "#261d09",
+          "text_color": "#fff"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "background_color": "#fff",
+          "linklist": "",
+          "linklist_mobile": "",
+          "text_color": "#2f2e21"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "background_color": "#261d09",
+          "text_color": "#fff",
+          "block1_text": "INFLUENCE",
+          "newsletter_heading": "NEWSLETTER",
+          "newsletter_paragraph": "<p>SIgn up to get 15% off your next order and the latest drops in your mailbox<\/p>",
+          "newsletter_placeholder": "Email",
+          "column3_heading_text": "LINKS",
+          "column4_heading_text": "SOCIAL MEDIA"
+        }
+      }
+    },
     "content_for_index": [
 
     ]
