@@ -1,4 +1,5 @@
 {% if section.settings.blog.articles.size > 0 %}
+  <h2 class="blogpost_heading-{{section.id}}">Featured Blogs</h2>
   <div class="blogpost-container container">
     <div class="blogpost-content flex">
       {% for article in section.settings.blog.articles limit: 4 %}
@@ -9,6 +10,15 @@
     </div>
   </div>
 {% endif %}
+
+{% style %}
+  .blogpost_heading-{{ section.id}}{
+    color: {{ section.settings.heading_text_color}}
+    ;
+    text-align: {{ section.settings.heading_position}}
+    ;
+  }
+{% endstyle %}
 
 
 {% schema %}
@@ -21,6 +31,28 @@
         "type": "blog",
         "id": "blog",
         "label": "Choose a Blog"
+      }, {
+        "type": "color",
+        "id": "heading_text_color",
+        "label": "Heading Color",
+        "default": "#000"
+      }, {
+        "type": "select",
+        "id": "heading_position",
+        "label": "Heading position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
       }
     ],
     "presets": [

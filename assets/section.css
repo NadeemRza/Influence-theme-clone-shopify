@@ -244,6 +244,11 @@ a {
   color: #261d09;
 }
 
+.blogpost_heading {
+  width: 90vw;
+  margin: 0 auto;
+}
+
 .blogpost-container {
   max-height: 13rem;
   margin-bottom: 38rem;
