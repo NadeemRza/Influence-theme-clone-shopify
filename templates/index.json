@@ -6,6 +6,7 @@
         "939fe7a5-6276-4d75-ba6e-0dc4b2d403a4": {
           "type": "content_blocks",
           "settings": {
+            "image": "shopify:\/\/shop_images\/imgwt.png",
             "image_position": "img-left",
             "caption_text": "MAKE A STATEMENT",
             "caption_text_color": "#271e0a",
@@ -14,7 +15,7 @@
             "button_text": "SHOP NOW",
             "button_link": "",
             "button_background_color": "#271e0a",
-            "button_text_color": "#fff",
+            "button_text_color": "#ffffff",
             "text_alignment": "text-center"
           }
         }
