@@ -79,7 +79,7 @@ section + section {
 .flex-box{
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  /* gap: 1rem; */
   width: 80%;
   /* max-width: 1400px; */
   max-width: 90vw;
