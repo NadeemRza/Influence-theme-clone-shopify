@@ -39,8 +39,7 @@
         ],
         "settings": {
           "annoucement_visibility": true,
-          "background_color": "#261d09",
-          "text_color": "#fff"
+          "background_color": "#261d09"
         }
       },
       "header": {
