@@ -26,16 +26,9 @@
       "settings": {
         "content_background_color": "#ecf1f5"
       }
-    },
-    "1948d88d-a002-4436-9b7d-53fa8b55c04a": {
-      "type": "blogpost",
-      "settings": {
-        "blog": "news"
-      }
     }
   },
   "order": [
-    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd",
-    "1948d88d-a002-4436-9b7d-53fa8b55c04a"
+    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd"
   ]
 }
