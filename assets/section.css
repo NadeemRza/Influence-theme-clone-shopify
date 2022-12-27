@@ -79,9 +79,12 @@ section + section {
 .flex-box{
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   width: 80%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
+  max-width: 90vw;
   margin: 0 auto;
+  /* margin: 0 auto 0 1.5rem; */
   justify-content: space-between;
 }
 
