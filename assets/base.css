@@ -144,6 +144,19 @@ h6,
   text-transform:lowercase;
 }
 
+/************************Font Weight Helper******************/
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-sb {
+  font-weight:600;
+}
+
+.fw-l {
+  font-weight: 300;
+}
+
 
 /*---------------------- Show or Hide -------------------------*/
 @media screen and (max-width: 749px) {

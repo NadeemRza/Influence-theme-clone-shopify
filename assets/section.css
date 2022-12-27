@@ -195,3 +195,36 @@ a {
       justify-content: flex-start;
     }
   }
+
+
+/*******************Footer************************/
+.footer {
+  display: flex;
+  flex-direction: Column;
+  margin: 0 auto;
+  padding: 1.75rem 0;
+}
+
+.footer__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 0 0 1.5rem;
+  /* column-gap: 0.5rem; */
+}
+
+.footer__text {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.fa-arrow-right {
+  position: relative;
+  left: -2rem;
+}
+
+.footer__input {
+  outline: none;
+  border: 1px solid #fff;
+}

@@ -1,0 +1,149 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+<div class="footer">
+  <div class="footer__content">
+    <h3>{{ section.settings.block1_text }}</h3>
+    <div>
+      {% form 'customer' %}
+        <h3>{{ section.settings.newsletter_heading }}</h3>
+        <p class="mt-1">{{ section.settings.newsletter_paragraph }}</p>
+        <input
+          type="text"
+          class="footer__input mt-1"
+          name=""
+          id=""
+          placeholder="{{section.settings.newsletter_placeholder}}">
+        <i class="fa-solid fa-arrow-right"></i>
+      {% endform %}
+    </div>
+    <div>
+      <h3>{{ section.settings.column3_heading_text }}</h3>
+      {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'list_blocks' %}
+          <ul>
+            <li class="mt-1">{{ block.type.list_blocks.list_text }}</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social Media</h3>
+          {% when 'logo_blocks' %}
+          <div class="mt-1">
+            {% assign mobile_image = block.settings.logo_mobile | default: block.settings.logo_image %}
+            {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.logo_image %}
+          </div>
+        </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="footer__text">
+    <span>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }}</span>
+    <span>
+      -- {{ powered_by_link }}</span>
+  </div>
+</div>
+
+{%  style  %} 
+    .footer {
+        background-color: {{ section.settings.background_color}};
+  ;
+    }
+
+    .footer * {
+    color: {{ section.settings.text_color}}
+  }
+
+  .footer__input {
+    background-color: {{ section.settings.background_color}};
+  ;
+  }
+ {% endstyle %}
+
+{% schema %}
+  {
+    "name": "footer",
+    "class": "footer",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#261d09"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Content Color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "id": "block1_text",
+        "label": "Column 1 Heading",
+        "default": "INFLUENCE"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "Newsletter Heading",
+        "default": "NEWSLETTER"
+      }, {
+        "type": "textarea",
+        "id": "newsletter_paragraph",
+        "label": "Newsletter Text",
+        "default": "<p>SIgn up to get 15% off your next order and the latest drops in your mailbox</p>"
+      }, {
+        "type": "textarea",
+        "id": "newsletter_placeholder",
+        "label": "Newsletter Placeholder",
+        "default": "Email"
+      }, {
+        "type": "text",
+        "id": "column3_heading_text",
+        "label": "Column 3 Heading",
+        "default": "LINKS"
+      }, {
+        "type": "text",
+        "id": "column4_heading_text",
+        "label": "Column 4 Heading",
+        "default": "SOCIAL MEDIA"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Logo Blocks",
+        "type": "logo_blocks",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo",
+            "info": "1200 x 500px .jpg recommended"
+          }, {
+            "type": "image_picker",
+            "id": "logo_mobile",
+            "label": "Logo (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          }
+        ]
+      }, {
+        "name": "List Blocks",
+        "type": "list_blocks",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "text",
+            "id": "list_text",
+            "label": "List Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
