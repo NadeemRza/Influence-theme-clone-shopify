@@ -8,17 +8,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_main.png",
             "heading_text": "NEW BASICS",
-            "heading_text_color": "#fff",
+            "heading_text_color": "#ffffff",
             "para_text": "THE ART OF STYLE",
-            "para_text_color": "#fff",
+            "para_text_color": "#ffffff",
             "button_text_1": "SHOP NEW IN",
             "button_link_1": "",
-            "button_bcg_color_1": "#fff",
-            "button_text_color_1": "#000",
+            "button_bcg_color_1": "#ffffff",
+            "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
             "button_link_2": "",
-            "button_bcg_color_2": "transparent",
-            "button_text_color_2": "#fff",
+            "button_bcg_color_2": "rgba(0,0,0,0)",
+            "button_text_color_2": "#ffffff",
             "content_position": "align-end justify-end",
             "text_alignment": "text-left"
           }
@@ -38,11 +38,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_2.png",
             "info_text": "BOTTOMS",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         }
       },
@@ -53,7 +53,7 @@
         "heading_text_1": "SPRING\/SUMMER.",
         "heading_text_2": "SHOP THE NEW SEASON NOW",
         "heading_text_alignment": "center",
-        "block_heading_text_color": "#000",
+        "block_heading_text_color": "#000000",
         "block_heading_font_size": 35,
         "content_position": "align-start justify-end"
       }
@@ -61,7 +61,9 @@
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
       "type": "blogpost",
       "settings": {
-        "blog": "news"
+        "blog": "news",
+        "heading_text_color": "#000",
+        "heading_position": "left"
       }
     }
   },
