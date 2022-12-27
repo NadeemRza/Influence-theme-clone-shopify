@@ -236,3 +236,30 @@ a {
   outline: none;
   border: 1px solid #fff;
 }
+
+
+/***********************Blogpost Section*************************/
+.article-color {
+  color: #261d09;
+}
+
+.blogpost-container {
+  max-height: 13rem;
+}
+
+.blogpost-content {
+  gap: 0 0.85rem;
+}
+
+.article-card__button {
+  background-color: #261d09;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.article-card__date {
+  background-color: #f5d284;
+  color: #ffff;
+  padding: 0.25rem 0.92rem;
+  border-radius: 0.5rem;
+}

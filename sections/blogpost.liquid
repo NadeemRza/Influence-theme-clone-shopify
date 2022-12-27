@@ -1,0 +1,32 @@
+{% if section.settings.blog.articles.size > 0 %}
+  <div class="blogpost-container container">
+    <div class="blogpost-content flex">
+      {% for article in section.settings.blog.articles limit: 4 %}
+        <div>
+          {% render 'blog-card', article: article %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Blogpost Section",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Choose a Blog"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Blogpost Section"
+      }
+    ]
+  }
+{% endschema %}
