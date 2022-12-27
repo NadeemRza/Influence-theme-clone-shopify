@@ -1,62 +1,73 @@
 {
   "sections": {
-    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd": {
-      "type": "image-with-text-1",
-      "disabled": true,
-      "settings": {
-        "content_background_color": "#ecf1f5"
-      }
-    },
-    "da46788e-1f02-4f49-ac10-995602adfe67": {
-      "type": "newsletter",
-      "settings": {
-        "heading_text": "SIGN UP NOW",
-        "heading_text_color": "#2c2613",
-        "subheading_text": "GET THE NEWSLETTER",
-        "subheading_text_color": "#2c2613",
-        "button_text": "SUBSCRIBE",
-        "button_background_color": "#2c2613",
-        "button_text_color": "#fff"
-      }
-    },
-    "fe1403c7-2a57-488e-b7fd-8e2a669f0ebf": {
-      "type": "modern-shop",
+    "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d": {
+      "type": "slideshow",
       "blocks": {
-        "1045d4d8-5eaa-4950-b724-06228417193d": {
-          "type": "img_text_blocks",
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5": {
+          "type": "slideshow-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/logo_img_b7cea675-f51d-487b-b34e-7afc7036ade5.png",
-            "heading_text": "MODERN",
-            "heading_text_color": "#000",
-            "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
-            "paragraph_text_color": "#000"
+            "image": "shopify:\/\/shop_images\/img_main.png",
+            "heading_text": "NEW BASICS",
+            "heading_text_color": "#fff",
+            "para_text": "THE ART OF STYLE",
+            "para_text_color": "#fff",
+            "button_text_1": "SHOP NEW IN",
+            "button_link_1": "",
+            "button_bcg_color_1": "#fff",
+            "button_text_color_1": "#000",
+            "button_text_2": "SHOP ALL",
+            "button_link_2": "",
+            "button_bcg_color_2": "transparent",
+            "button_text_color_2": "#fff",
+            "content_position": "align-end justify-end",
+            "text_alignment": "text-left"
           }
         }
       },
       "block_order": [
-        "1045d4d8-5eaa-4950-b724-06228417193d"
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5"
       ],
       "settings": {
-        "background_color": "#ece2cc"
       }
     },
-    "bc9554b0-5d5f-417b-963c-1b940b712419": {
-      "type": "newsletter",
+    "0827d88e-8db3-43e3-aa47-e634432714e5": {
+      "type": "summer-shop",
+      "blocks": {
+        "42a0b5ff-a82a-42c7-b909-9b203ec57a8c": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_2.png",
+            "info_text": "BOTTOMS",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "42a0b5ff-a82a-42c7-b909-9b203ec57a8c"
+      ],
       "settings": {
-        "heading_text": "SIGN UP NOW",
-        "heading_text_color": "#2c2613",
-        "subheading_text": "GET THE NEWSLETTER",
-        "subheading_text_color": "#2c2613",
-        "button_text": "SUBSCRIBE",
-        "button_background_color": "#2c2613",
-        "button_text_color": "#fff"
+        "heading_text_1": "SPRING\/SUMMER.",
+        "heading_text_2": "SHOP THE NEW SEASON NOW",
+        "heading_text_alignment": "center",
+        "block_heading_text_color": "#000",
+        "block_heading_font_size": 35,
+        "content_position": "align-start justify-end"
+      }
+    },
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
+      "type": "blogpost",
+      "settings": {
+        "blog": "news"
       }
     }
   },
   "order": [
-    "6b4d262a-2cc8-4ec0-90ed-e0badc30eedd",
-    "da46788e-1f02-4f49-ac10-995602adfe67",
-    "fe1403c7-2a57-488e-b7fd-8e2a669f0ebf",
-    "bc9554b0-5d5f-417b-963c-1b940b712419"
+    "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
+    "0827d88e-8db3-43e3-aa47-e634432714e5",
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88"
   ]
 }
