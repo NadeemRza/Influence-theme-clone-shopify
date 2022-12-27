@@ -1,3 +1,8 @@
+/********************Section Spacing*******************************/
+section + section {
+  margin-top: 3rem;
+}
+
 /********************SlideShow Section*******************************/
 .slideshow__wrapper{
     position: relative;
