@@ -1,11 +1,27 @@
 <div class="product-card flex height--custom">
   {% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}}, desktopSrc: {{product.featured_image}} %}
   <div>
-    <h2 class="heading2">{{ product.title }}</h2>
-    <h4>{{ product.price | money }}</h4>
+    <h4 class="product-card__heading">{{ product.title }}</h4>
+    <p class="mt-1" id="product-card__reviews"><span>5 Star</span> <span id="product-card__reviews-count">54 reviews</span> </p>
+    <p class="mt-1 fw-sb" id="product-card__price">MRP: {{ product.price | money }}
     {% if product.compare_at_price > product.price %}
-      {{ product.compare_at_price | money }}
+      <s>{{ product.compare_at_price_max | money }}</s>
     {% endif %}
+    </p>
   </div>
-
+  <div>
+    {% unless product.has_only_default_variant %}
+    {% for option in product.options_with_values %}
+      <label class="mt-1" id="product-card__value">{{option.name}}</label>
+      <select class="product-card__select">
+      {% for value in option.values %}
+        <option value="{{value}}">{{value}}</option>
+        {{value}}
+      {% endfor %}
+      </select>
+    {% endfor %}
+  {% endunless %}
+  <div>
+    <button class="button button--primary mt-1">Add To Cart</button>
+  </div>
 </div>

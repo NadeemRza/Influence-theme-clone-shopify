@@ -270,3 +270,58 @@ a {
   padding: 0.25rem 0.92rem;
   border-radius: 0.5rem;
 }
+
+
+/*******************Product Card******************/
+.product-card{
+  max-width: 90vw;
+  margin: 0.3rem 0.5rem 0.3rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  border: 1px solid rgb(244, 236, 236);
+  align-items: center;
+  padding: 0.2rem 0.45rem 0;
+  background-color: #f3f0f8;
+}
+
+.pimg{
+  max-width: 6rem;
+  max-height: 6rem;
+}
+
+.product-card__heading{
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  color: #2d2411;
+  margin-top: 0.4rem;
+}
+
+#product-card__reviews {
+  color: #2d2411;
+}
+
+#product-card__reviews-count {
+  opacity: 0.8;
+  color: #2d2411;
+}
+
+#product-card__price {
+  color: #2d2411;
+}
+
+#product-card__value {
+  color: #2d2411;
+}
+
+.product-card__select {
+  background-color: #2d2411;
+  color: #fff;
+}
+
+#product-main_color {
+  color: #2d2411;
+}
+
+.product-main_color {
+  color: #2d2411;
+}

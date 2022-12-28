@@ -157,6 +157,10 @@ h6,
   font-weight: 300;
 }
 
+.fw-sb {
+  font-weight: 600;
+}
+
 
 /*---------------------- Show or Hide -------------------------*/
 @media screen and (max-width: 749px) {
