@@ -24,21 +24,53 @@
       <h3>{{ section.settings.column3_heading_text }}</h3>
       {% for block in section.blocks %}
         {% case block.type %}
-        {% when 'list_blocks' %}
+          {% when 'list_blocks' %}
           <ul>
             <li class="mt-1">{{ block.type.list_blocks.list_text }}</li>
           </ul>
         </div>
-        <div>
-          <h3>Social Media</h3>
-          {% when 'logo_blocks' %}
-          <div class="mt-1">
-            {% assign mobile_image = block.settings.logo_mobile | default: block.settings.logo_image %}
-            {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.logo_image %}
-          </div>
-        </div>
-        {% endcase %}
+      {% endcase %}
       {% endfor %}
+    </div>
+    <div>
+      <h3>Social Media</h3>
+
+      {% comment %}
+      {% when 'logo_blocks' %}
+      <div class="mt-1">
+      {% assign mobile_image = block.settings.logo_mobile | default: block.settings.logo_image %}
+      {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.logo_image %}
+      </div>
+      </div>
+      {% endcomment %}
+
+      <div>
+        {%- if section.settings.show_social -%}
+          <ul class="footer__list-social list-unstyled list-social flex align-center" role="list">
+              <li class="list-social__item">
+                <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
+                  {%- render 'icon-twitter' -%}
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+                  {%- render 'icon-facebook' -%}
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
+                  {%- render 'icon-instagram' -%}
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
+                  {%- render 'icon-linkedin' -%}
+                </a>
+              </li>
+          </ul>
+        {%- endif -%}
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom-content flex justify-between align-center">
@@ -49,33 +81,33 @@
     </div>
     <div class="footer__bottom-payment-methods">
       {%- if section.settings.payment_enable -%}
-            <ul class="list list-payment flex" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
+        <ul class="list list-payment flex" role="list">
+          {%- for type in shop.enabled_payment_types -%}
+            <li class="list-payment__item">
+              {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+            </li>
+          {%- endfor -%}
+        </ul>
       {%- endif -%}
     </div>
   </div>
 </div>
 
-{%  style  %} 
-    .footer {
-        background-color: {{ section.settings.background_color}};
-  ;
-    }
+{% style %}
+  .footer {
+    background-color: {{ section.settings.background_color}}
+    ;
+  }
 
-    .footer * {
+  .footer * {
     color: {{ section.settings.text_color}}
   }
 
   .footer__input {
-    background-color: {{ section.settings.background_color}};
-  ;
+    background-color: {{ section.settings.background_color}}
+    ;
   }
- {% endstyle %}
+{% endstyle %}
 
 {% schema %}
   {
@@ -126,13 +158,17 @@
         "id": "column4_heading_text",
         "label": "Column 4 Heading",
         "default": "SOCIAL MEDIA"
-      },
-      {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
-    }
+      }, {
+        "type": "checkbox",
+        "id": "show_social",
+        "default": true,
+        "label": "Show Social Links"
+      }, {
+        "type": "checkbox",
+        "id": "payment_enable",
+        "default": true,
+        "label": "Show Payment Modes"
+      }
     ],
     "blocks": [
       {

@@ -243,6 +243,16 @@ a {
   padding: 0 2.5rem;
 }
 
+.footer__list-social {
+  margin-left: -1.2rem;
+}
+
+.list-social__item {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+
 
 /***********************Blogpost Section*************************/
 .article-color {
