@@ -218,7 +218,7 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0 0 0 1.5rem;
+  padding: 0 0 0 2.5rem;
   /* column-gap: 0.5rem; */
 }
 
@@ -236,6 +236,11 @@ a {
 .footer__input {
   outline: none;
   border: 1px solid #fff;
+}
+
+.footer__bottom-content {
+  margin-top: 2rem;
+  padding: 0 2.5rem;
 }
 
 

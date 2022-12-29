@@ -41,10 +41,23 @@
       {% endfor %}
     </div>
   </div>
-  <div class="footer__text">
-    <span>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }}</span>
-    <span>
-      -- {{ powered_by_link }}</span>
+  <div class="footer__bottom-content flex justify-between align-center">
+    <div class="footer__bottom-text">
+      <span>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }}</span>
+      <span>
+        -- {{ powered_by_link }}</span>
+    </div>
+    <div class="footer__bottom-payment-methods">
+      {%- if section.settings.payment_enable -%}
+            <ul class="list list-payment flex" role="list">
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="list-payment__item">
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+      {%- endif -%}
+    </div>
   </div>
 </div>
 
@@ -113,7 +126,13 @@
         "id": "column4_heading_text",
         "label": "Column 4 Heading",
         "default": "SOCIAL MEDIA"
-      }
+      },
+      {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.payment_enable.label"
+    }
     ],
     "blocks": [
       {
