@@ -62,14 +62,27 @@
       "type": "blogpost",
       "settings": {
         "blog": "news",
-        "heading_text_color": "#000",
+        "heading_text_color": "#000000",
         "heading_position": "left"
+      }
+    },
+    "56ae2041-496e-41fc-abb6-242846a77479": {
+      "type": "newsletter",
+      "settings": {
+        "heading_text": "SIGN UP NOW",
+        "heading_text_color": "#2c2613",
+        "subheading_text": "GET THE NEWSLETTER",
+        "subheading_text_color": "#2c2613",
+        "button_text": "SUBSCRIBE",
+        "button_background_color": "#2c2613",
+        "button_text_color": "#fff"
       }
     }
   },
   "order": [
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
     "0827d88e-8db3-43e3-aa47-e634432714e5",
-    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88"
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
+    "56ae2041-496e-41fc-abb6-242846a77479"
   ]
 }
