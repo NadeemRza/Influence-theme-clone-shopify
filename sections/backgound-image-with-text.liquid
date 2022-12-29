@@ -13,12 +13,12 @@
             <div>
               {% if section.settings.button_text_1 != blank and section.settings.button_link_1 != blank %}
                 <a>
-                  <button class="button-{{ section.id }}-1">{{ section.settings.button_text_1 }}</button>
+                  <button class="button--1">{{ section.settings.button_text_1 }}</button>
                 </a>
               {% endif %}
               {% if section.settings.button_text_2 != blank and section.settings.button_link_2 != blank %}
                 <a>
-                  <button class="button-{{ section.id }}-2">{{ section.settings.button_text_2 }}</button>
+                  <button class="button--2">{{ section.settings.button_text_2 }}</button>
                 </a>
               {% endif %}
             </div>
@@ -38,7 +38,7 @@
     color: {{ section.settings.para_text_color}}
     ;
   }
-  .button-{{ section.id}}-1 {
+  .button--1 {
     background-color: {{ section.settings.button_bcg_color_1}}
     ;
     color: {{ section.settings.button_text_color_1}}
@@ -50,7 +50,7 @@
     bodrer-left: 1px solid #ffff;
     border-top: 2px solid #ffff;
   }
-  .button-{{ secttion.id}}-2 {
+  .button--2 {
     background-color: {{ secttion.settings.button_bcg_color_2}}
     ;
     color: {{ secttion.settings.button_text_color_2}}
