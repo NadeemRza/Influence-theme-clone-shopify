@@ -30,7 +30,8 @@
       {% endfor %}
     </ul>
   </div>
-  <button class="button button--primary button-{{section.id}}">SignIn</button>
+  <button class="button button-{{section.id}}">{{ section.settings.button_text }}</button>
+  <i class="fa-solid fa-bars" id="bar-icon"></i>
 </div>
 
 {% style %}
@@ -46,12 +47,24 @@
 
   .button-{{ section.id}}{
     border-radius: 1rem;
+    background-color: {{ section.settings.button_background_color}}
+    ;
+    color: {{ section.settings.button_text_color}}
+    ;
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 749px) {
     ul {
       font-size: 1.3rem;
       margin-left: -2.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 581px) {
+    .button-{{ section.id}}{
+      max-height: 1rem;
+      max-width: 2rem;
     }
   }
 {% endstyle %}
@@ -93,8 +106,22 @@
         "id": "text_color",
         "label": "Text Color",
         "default": "#2f2e21"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "SignIn"
+      }, {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#2f2e21"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
       }
-
     ]
   }
 {% endschema %}

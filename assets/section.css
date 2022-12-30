@@ -158,7 +158,7 @@ section + section {
 
 /*******************Header************************/
 .header {
-  width: 95vw;
+  width: 100vw;
   justify-content: space-around;
   margin: 0 auto;
   padding: 2rem 0;
@@ -177,30 +177,67 @@ a {
 
 .parent {
     column-gap: 2rem;
-    font-weight: semi-bold;
+    font-weight: bold;
   }
 
-.parent:hover + .child {
+  .parent:hover .child {
     display: block;
   }
 
   .child {
-    background-color: #fff;
+    background-color: #dbc9a0;
     position: relative;
+    top: 0.25rem;
     z-index: 1;
     display: none;
+    padding: 1.2rem 0.5rem;
+    border-radius: 0.5rem;
+    opacity: 0.973;
   }
 
   .grandchild {
-    background-color: #fff;
+    background-color: #dbc9a0;
     position: relative;
     z-index: 1;
+  }
+
+  #bar-icon {
+    color: #261d09;
+    display: none;
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 749px) {
     .header {
       flex-direction: column;
       justify-content: flex-start;
+      column-gap: 0.8rem;
+    }
+    ul {
+      font-size: 1.3rem;
+      margin-left: -2.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 581px) {
+    #bar-icon {
+      display: flex;
+      font-size: 2rem;
+      order: -1;
+    }
+
+    .parent {
+      display: none;
+    }
+
+    /* #bar-icon:hover .parent {
+      display: flex;
+    } */
+
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 90vw;
     }
   }
 
