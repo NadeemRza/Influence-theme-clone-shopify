@@ -144,6 +144,29 @@
         "content_position": "align-start justify-end"
       }
     },
+    "fc99e56d-6b26-4264-957c-300b6ddd89ad": {
+      "type": "testimonial",
+      "blocks": {
+        "403dd947-d4a6-4367-9938-8207789bdec2": {
+          "type": "review_block",
+          "settings": {
+            "top_heading_text": "DIRECT FROM THE CUSTOMERS",
+            "heading_text": "5 STAR FEEDBACK",
+            "text_alignment": "center",
+            "background_color": "#ece2cc",
+            "author_rating": "5 Star",
+            "paragraph_text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Atque voluptate ullam sint!<\/p>",
+            "author_info": "Maria Smith",
+            "author_city": "London"
+          }
+        }
+      },
+      "block_order": [
+        "403dd947-d4a6-4367-9938-8207789bdec2"
+      ],
+      "settings": {
+      }
+    },
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
       "type": "blogpost",
       "settings": {
@@ -183,37 +206,14 @@
         "button_background_color": "#2c2613",
         "button_text_color": "#ffffff"
       }
-    },
-    "fc99e56d-6b26-4264-957c-300b6ddd89ad": {
-      "type": "testimonial",
-      "blocks": {
-        "403dd947-d4a6-4367-9938-8207789bdec2": {
-          "type": "review_block",
-          "settings": {
-            "top_heading_text": "DIRECT FROM THE CUSTOMERS",
-            "heading_text": "5 STAR FEEDBACK",
-            "text_alignment": "center",
-            "background_color": "#ece2cc",
-            "author_rating": "5 Star",
-            "paragraph_text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Atque voluptate ullam sint!<\/p>",
-            "author_info": "Maria Smith",
-            "author_city": "London"
-          }
-        }
-      },
-      "block_order": [
-        "403dd947-d4a6-4367-9938-8207789bdec2"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
     "0827d88e-8db3-43e3-aa47-e634432714e5",
+    "fc99e56d-6b26-4264-957c-300b6ddd89ad",
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
-    "56ae2041-496e-41fc-abb6-242846a77479",
-    "fc99e56d-6b26-4264-957c-300b6ddd89ad"
+    "56ae2041-496e-41fc-abb6-242846a77479"
   ]
 }
