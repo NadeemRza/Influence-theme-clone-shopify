@@ -12,20 +12,41 @@
             "para_text": "THE ART OF STYLE",
             "para_text_color": "#ffffff",
             "button_text_1": "SHOP NEW IN",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/blogs\/news\/technology",
             "button_bcg_color_1": "#ffffff",
             "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/blogs\/news",
             "button_bcg_color_2": "rgba(0,0,0,0)",
             "button_text_color_2": "#ffffff",
             "content_position": "align-end justify-end",
             "text_alignment": "text-left"
           }
+        },
+        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a": {
+          "type": "slideshow-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_main.png",
+            "heading_text": "NEW BASICS",
+            "heading_text_color": "#fff",
+            "para_text": "THE ART OF STYLE",
+            "para_text_color": "#fff",
+            "button_text_1": "SHOP NEW IN",
+            "button_link_1": "shopify:\/\/collections",
+            "button_bcg_color_1": "#fff",
+            "button_text_color_1": "#000",
+            "button_text_2": "SHOP ALL",
+            "button_link_2": "shopify:\/\/blogs\/news\/shopify-course",
+            "button_bcg_color_2": "transparent",
+            "button_text_color_2": "#fff",
+            "content_position": "align-center justify-center",
+            "text_alignment": "text-left"
+          }
         }
       },
       "block_order": [
-        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5"
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5",
+        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a"
       ],
       "settings": {
       }
@@ -36,7 +57,7 @@
         "42a0b5ff-a82a-42c7-b909-9b203ec57a8c": {
           "type": "summer_shop_blocks",
           "settings": {
-            "image": "shopify:\/\/shop_images\/img_2.png",
+            "image": "shopify:\/\/shop_images\/img_1.png",
             "info_text": "BOTTOMS",
             "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
@@ -44,10 +65,75 @@
             "button_background_color": "#ffffff",
             "button_text_color": "#000000"
           }
+        },
+        "27830f4d-94d4-4954-9eec-345681b0c236": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_2.png",
+            "info_text": "ONE PIECE",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
+        },
+        "abfe879f-88c8-421b-8c1b-643d5767f02f": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_3.png",
+            "info_text": "TOPS",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
+        },
+        "e152b762-6d68-4f88-a378-2aaca0592722": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_21.png",
+            "info_text": "SKIRTS",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
+        },
+        "c3fd4222-dc08-4995-b894-44605514a838": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_22.png",
+            "info_text": "DRESSES",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
+        },
+        "0f5b29e8-5a3d-4b27-af1a-18bc0579c46c": {
+          "type": "summer_shop_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_23.png",
+            "info_text": "SALE",
+            "info_text_color": "#fff",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#fff",
+            "button_text_color": "#000"
+          }
         }
       },
       "block_order": [
-        "42a0b5ff-a82a-42c7-b909-9b203ec57a8c"
+        "42a0b5ff-a82a-42c7-b909-9b203ec57a8c",
+        "27830f4d-94d4-4954-9eec-345681b0c236",
+        "abfe879f-88c8-421b-8c1b-643d5767f02f",
+        "e152b762-6d68-4f88-a378-2aaca0592722",
+        "c3fd4222-dc08-4995-b894-44605514a838",
+        "0f5b29e8-5a3d-4b27-af1a-18bc0579c46c"
       ],
       "settings": {
         "heading_text_1": "SPRING\/SUMMER.",
@@ -71,17 +157,17 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/bg_img.png",
         "heading_text": "FASHION: DESIGNED FOR LIFE",
-        "heading_text_color": "#fff",
+        "heading_text_color": "#ffffff",
         "para_text": "CELEBRATE COMFORT",
-        "para_text_color": "#fff",
+        "para_text_color": "#ffffff",
         "button_text_1": "SHOP DRESSES",
         "button_link_1": "shopify:\/\/collections\/all",
-        "button_bcg_color_1": "#fff",
-        "button_text_color_1": "#000",
+        "button_bcg_color_1": "#ffffff",
+        "button_text_color_1": "#000000",
         "button_text_2": "SHOP ONE PIECES",
         "button_link_2": "shopify:\/\/collections\/all",
-        "button_bcg_color_2": "transparent",
-        "button_text_color_2": "#fff",
+        "button_bcg_color_2": "rgba(0,0,0,0)",
+        "button_text_color_2": "#ffffff",
         "content_position": "align-end justify-start",
         "text_alignment": "text-left"
       }

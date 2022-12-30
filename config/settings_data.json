@@ -24,21 +24,21 @@
             "type": "annoucement-block",
             "settings": {
               "annoucement_text": "FREE DELIVERY FOR ORDER OVER RS.500",
-              "text_color": "#fff"
+              "text_color": "#ffffff"
             }
           },
           "3c987444-7c62-4ecf-8a96-334388243ea5": {
             "type": "annoucement-block",
             "settings": {
               "annoucement_text": "EXTRA 30% OFF SALE",
-              "text_color": "#fff"
+              "text_color": "#ffffff"
             }
           },
           "b174ef9a-1d02-40fc-9b02-71431fc939ff": {
             "type": "annoucement-block",
             "settings": {
               "annoucement_text": "YEAR END SALE IS LIVE",
-              "text_color": "#fff"
+              "text_color": "#ffffff"
             }
           }
         },
@@ -62,11 +62,36 @@
           "text_color": "#2f2e21",
           "button_text": "SignIn",
           "button_background_color": "#2f2e21",
-          "button_text_color": "#fff"
+          "button_text_color": "#ffffff"
         }
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "3ff76f8d-228e-4e1c-ac79-f69760d57a7d": {
+            "type": "list_blocks",
+            "settings": {
+              "list_text": "Shop"
+            }
+          },
+          "9c3998b0-0101-4e2b-80cf-82eef34934b3": {
+            "type": "list_blocks",
+            "settings": {
+              "list_text": "About"
+            }
+          },
+          "dc48b9e4-9543-431e-8212-cfafc775845e": {
+            "type": "list_blocks",
+            "settings": {
+              "list_text": "Theme Features"
+            }
+          }
+        },
+        "block_order": [
+          "3ff76f8d-228e-4e1c-ac79-f69760d57a7d",
+          "9c3998b0-0101-4e2b-80cf-82eef34934b3",
+          "dc48b9e4-9543-431e-8212-cfafc775845e"
+        ],
         "settings": {
           "background_color": "#261d09",
           "text_color": "#ffffff",
