@@ -39,7 +39,7 @@
             "button_link_2": "shopify:\/\/blogs\/news\/shopify-course",
             "button_bcg_color_2": "transparent",
             "button_text_color_2": "#fff",
-            "content_position": "align-end justify-end",
+            "content_position": "align-center justify-center",
             "text_alignment": "text-left"
           }
         }
