@@ -12,20 +12,41 @@
             "para_text": "THE ART OF STYLE",
             "para_text_color": "#ffffff",
             "button_text_1": "SHOP NEW IN",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/blogs\/news\/technology",
             "button_bcg_color_1": "#ffffff",
             "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/blogs\/news",
             "button_bcg_color_2": "rgba(0,0,0,0)",
             "button_text_color_2": "#ffffff",
+            "content_position": "align-end justify-end",
+            "text_alignment": "text-left"
+          }
+        },
+        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a": {
+          "type": "slideshow-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_main.png",
+            "heading_text": "NEW BASICS",
+            "heading_text_color": "#fff",
+            "para_text": "THE ART OF STYLE",
+            "para_text_color": "#fff",
+            "button_text_1": "SHOP NEW IN",
+            "button_link_1": "shopify:\/\/collections",
+            "button_bcg_color_1": "#fff",
+            "button_text_color_1": "#000",
+            "button_text_2": "SHOP ALL",
+            "button_link_2": "shopify:\/\/blogs\/news\/shopify-course",
+            "button_bcg_color_2": "transparent",
+            "button_text_color_2": "#fff",
             "content_position": "align-end justify-end",
             "text_alignment": "text-left"
           }
         }
       },
       "block_order": [
-        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5"
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5",
+        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a"
       ],
       "settings": {
       }
@@ -71,17 +92,17 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/bg_img.png",
         "heading_text": "FASHION: DESIGNED FOR LIFE",
-        "heading_text_color": "#fff",
+        "heading_text_color": "#ffffff",
         "para_text": "CELEBRATE COMFORT",
-        "para_text_color": "#fff",
+        "para_text_color": "#ffffff",
         "button_text_1": "SHOP DRESSES",
         "button_link_1": "shopify:\/\/collections\/all",
-        "button_bcg_color_1": "#fff",
-        "button_text_color_1": "#000",
+        "button_bcg_color_1": "#ffffff",
+        "button_text_color_1": "#000000",
         "button_text_2": "SHOP ONE PIECES",
         "button_link_2": "shopify:\/\/collections\/all",
-        "button_bcg_color_2": "transparent",
-        "button_text_color_2": "#fff",
+        "button_bcg_color_2": "rgba(0,0,0,0)",
+        "button_text_color_2": "#ffffff",
         "content_position": "align-end justify-start",
         "text_alignment": "text-left"
       }
