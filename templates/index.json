@@ -28,17 +28,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_main.png",
             "heading_text": "NEW BASICS",
-            "heading_text_color": "#fff",
+            "heading_text_color": "#ffffff",
             "para_text": "THE ART OF STYLE",
-            "para_text_color": "#fff",
+            "para_text_color": "#ffffff",
             "button_text_1": "SHOP NEW IN",
             "button_link_1": "shopify:\/\/collections",
-            "button_bcg_color_1": "#fff",
-            "button_text_color_1": "#000",
+            "button_bcg_color_1": "#ffffff",
+            "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
             "button_link_2": "shopify:\/\/blogs\/news\/shopify-course",
-            "button_bcg_color_2": "transparent",
-            "button_text_color_2": "#fff",
+            "button_bcg_color_2": "rgba(0,0,0,0)",
+            "button_text_color_2": "#ffffff",
             "content_position": "align-center justify-center",
             "text_alignment": "text-left"
           }
@@ -71,11 +71,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_2.png",
             "info_text": "ONE PIECE",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         },
         "abfe879f-88c8-421b-8c1b-643d5767f02f": {
@@ -83,11 +83,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_3.png",
             "info_text": "TOPS",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         },
         "e152b762-6d68-4f88-a378-2aaca0592722": {
@@ -95,11 +95,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_21.png",
             "info_text": "SKIRTS",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         },
         "c3fd4222-dc08-4995-b894-44605514a838": {
@@ -107,11 +107,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_22.png",
             "info_text": "DRESSES",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         },
         "0f5b29e8-5a3d-4b27-af1a-18bc0579c46c": {
@@ -119,11 +119,11 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_23.png",
             "info_text": "SALE",
-            "info_text_color": "#fff",
+            "info_text_color": "#ffffff",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_background_color": "#fff",
-            "button_text_color": "#000"
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000"
           }
         }
       },
@@ -142,6 +142,29 @@
         "block_heading_text_color": "#000000",
         "block_heading_font_size": 35,
         "content_position": "align-start justify-end"
+      }
+    },
+    "fc99e56d-6b26-4264-957c-300b6ddd89ad": {
+      "type": "testimonial",
+      "blocks": {
+        "403dd947-d4a6-4367-9938-8207789bdec2": {
+          "type": "review_block",
+          "settings": {
+            "top_heading_text": "DIRECT FROM THE CUSTOMERS",
+            "heading_text": "5 STAR FEEDBACK",
+            "text_alignment": "center",
+            "background_color": "#ece2cc",
+            "author_rating": "5 Star",
+            "paragraph_text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Atque voluptate ullam sint!<\/p>",
+            "author_info": "Maria Smith",
+            "author_city": "London"
+          }
+        }
+      },
+      "block_order": [
+        "403dd947-d4a6-4367-9938-8207789bdec2"
+      ],
+      "settings": {
       }
     },
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
@@ -188,6 +211,7 @@
   "order": [
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
     "0827d88e-8db3-43e3-aa47-e634432714e5",
+    "fc99e56d-6b26-4264-957c-300b6ddd89ad",
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
     "56ae2041-496e-41fc-abb6-242846a77479"
