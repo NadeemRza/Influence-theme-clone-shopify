@@ -1,7 +1,11 @@
-<div class="header flex align-center">
+<div class="header flex align-center justify-between">
   <div class="logo">
+    {% if section.settings.image != blank or section.settings.image_mobile != blank %}
     {% assign mobile_image = section.settings.image_mobile | default: section.settings.image %}
     {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
+    {%  else %}
+    <div class="header__logo-text">{{section.settings.logo_text}}</div>
+    {% endif %}
   </div>
   <div>
     <ul class="parent flex">
@@ -30,8 +34,27 @@
       {% endfor %}
     </ul>
   </div>
-  <button class="button button-{{section.id}}">{{ section.settings.button_text }}</button>
-  <i class="fa-solid fa-bars" id="bar-icon"></i>
+  <div class="button-plus-icons">
+    <button class="button button-{{section.id}}">{{ section.settings.button_text }}</button>
+    <i class="fa-solid fa-bars" id="bar-icon"></i>
+    <a href="{{ routes.cart_url }}" class="cart-icon">
+      {%- render 'icon-cart' -%}
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          {% render 'icon-user' %}
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+  </div>
 </div>
 
 {% style %}
@@ -65,6 +88,7 @@
     .button-{{ section.id}}{
       max-height: 1rem;
       max-width: 2rem;
+      display: none;
     }
   }
 {% endstyle %}
@@ -92,6 +116,11 @@
         "id": "image_mobile",
         "label": "Image (Mobile)",
         "info": "600 x 800px .jpg recommended"
+      },{
+        "type": "text",
+        "id": "logo_text",
+        "label": "Logo Text",
+        "default": "Influence"
       },
       {
         "type": "link_list",

@@ -207,6 +207,18 @@ a {
     cursor: pointer;
   }
 
+  .cart-icon {
+    position: relative;
+    top: 1.5rem;
+    left: 2rem;
+  }
+
+  .header__logo-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2f2e21;
+  }
+
   @media only screen and (max-width: 749px) {
     .header {
       flex-direction: column;
@@ -230,6 +242,8 @@ a {
       display: none;
     }
 
+
+
     /* #bar-icon:hover .parent {
       display: flex;
     } */
@@ -238,6 +252,10 @@ a {
       flex-direction: row;
       justify-content: space-between;
       max-width: 90vw;
+    }
+
+    .cart-icon {
+      display: none;
     }
   }
 
