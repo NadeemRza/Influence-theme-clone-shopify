@@ -195,49 +195,6 @@
         "text_alignment": "text-left"
       }
     },
-    "56ae2041-496e-41fc-abb6-242846a77479": {
-      "type": "newsletter",
-      "settings": {
-        "heading_text": "SIGN UP NOW",
-        "heading_text_color": "#2c2613",
-        "subheading_text": "GET THE NEWSLETTER",
-        "subheading_text_color": "#2c2613",
-        "button_text": "SUBSCRIBE",
-        "button_background_color": "#2c2613",
-        "button_text_color": "#ffffff"
-      }
-    },
-    "c035ac9e-25ac-4182-ade0-4290dae94fea": {
-      "type": "image-hover-section",
-      "blocks": {
-        "ef16a17e-a43c-41b7-8e45-7a23bc445301": {
-          "type": "image_blocks",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/img_40.png",
-            "heading_text_1": "Fabric & Materials",
-            "heading_text_color_1": "#261d09",
-            "paragraph_text_1": "<p>Fabric choice is an important element in our design process and we only use the highest quality European, Japanese or Korean fabrics.<\/p>",
-            "paragraph_text_color_1": "#261d09",
-            "image_2": "shopify:\/\/shop_images\/img_41.png",
-            "heading_text_2": "Designed for life",
-            "heading_text_color_2": "#261d09",
-            "paragraph_text_2": "<p>We dont believe in fast fashion or throw away culture. To ensure our pieces will be worn for a lifetime we create clothes which have good drape, are non-sheer and feel comfortable to the skin.<\/p>",
-            "paragraph_text_color_2": "#261d09"
-          }
-        }
-      },
-      "block_order": [
-        "ef16a17e-a43c-41b7-8e45-7a23bc445301"
-      ],
-      "settings": {
-        "heading_text_1": "Our Manufacturing Process",
-        "heading_text_1_color": "#261d09",
-        "heading_text_2": "SUSTAINABILITY",
-        "heading_text_2_color": "#261d09",
-        "heading_alignment": "left-align",
-        "content_background_color": "#ecf1f5"
-      }
-    },
     "1909d765-5894-4518-83b3-85ef0cf843cc": {
       "type": "modern-shop",
       "blocks": {
@@ -291,6 +248,49 @@
       "settings": {
         "background_color": "#ece2cc"
       }
+    },
+    "c035ac9e-25ac-4182-ade0-4290dae94fea": {
+      "type": "image-hover-section",
+      "blocks": {
+        "ef16a17e-a43c-41b7-8e45-7a23bc445301": {
+          "type": "image_blocks",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/img_40.png",
+            "heading_text_1": "Fabric & Materials",
+            "heading_text_color_1": "#261d09",
+            "paragraph_text_1": "<p>Fabric choice is an important element in our design process and we only use the highest quality European, Japanese or Korean fabrics.<\/p>",
+            "paragraph_text_color_1": "#261d09",
+            "image_2": "shopify:\/\/shop_images\/img_41.png",
+            "heading_text_2": "Designed for life",
+            "heading_text_color_2": "#261d09",
+            "paragraph_text_2": "<p>We dont believe in fast fashion or throw away culture. To ensure our pieces will be worn for a lifetime we create clothes which have good drape, are non-sheer and feel comfortable to the skin.<\/p>",
+            "paragraph_text_color_2": "#261d09"
+          }
+        }
+      },
+      "block_order": [
+        "ef16a17e-a43c-41b7-8e45-7a23bc445301"
+      ],
+      "settings": {
+        "heading_text_1": "Our Manufacturing Process",
+        "heading_text_1_color": "#261d09",
+        "heading_text_2": "SUSTAINABILITY",
+        "heading_text_2_color": "#261d09",
+        "heading_alignment": "left-align",
+        "content_background_color": "#ecf1f5"
+      }
+    },
+    "56ae2041-496e-41fc-abb6-242846a77479": {
+      "type": "newsletter",
+      "settings": {
+        "heading_text": "SIGN UP NOW",
+        "heading_text_color": "#2c2613",
+        "subheading_text": "GET THE NEWSLETTER",
+        "subheading_text_color": "#2c2613",
+        "button_text": "SUBSCRIBE",
+        "button_background_color": "#2c2613",
+        "button_text_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -299,8 +299,8 @@
     "fc99e56d-6b26-4264-957c-300b6ddd89ad",
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
-    "56ae2041-496e-41fc-abb6-242846a77479",
+    "1909d765-5894-4518-83b3-85ef0cf843cc",
     "c035ac9e-25ac-4182-ade0-4290dae94fea",
-    "1909d765-5894-4518-83b3-85ef0cf843cc"
+    "56ae2041-496e-41fc-abb6-242846a77479"
   ]
 }
