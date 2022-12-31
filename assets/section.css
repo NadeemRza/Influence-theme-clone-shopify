@@ -352,6 +352,11 @@ a {
 
 
 /***********************Blogpost Section*************************/
+.blogpost-section {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
 .article-color {
   color: #261d09;
 }
@@ -368,6 +373,7 @@ a {
 
 .blogpost-content {
   gap: 0 0.85rem;
+  /* flex-wrap: wrap; */
 }
 
 .article-card__button {

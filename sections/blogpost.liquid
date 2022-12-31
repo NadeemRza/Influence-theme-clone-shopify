@@ -1,12 +1,14 @@
 {% if section.settings.blog.articles.size > 0 %}
-  <h2 class="blogpost_heading-{{section.id}}">Featured Blogs</h2>
-  <div class="blogpost-container container">
-    <div class="blogpost-content flex">
-      {% for article in section.settings.blog.articles limit: 4 %}
-        <div>
-          {% render 'blog-card', article: article %}
-        </div>
-      {% endfor %}
+  <div class="blogpost-section">
+    <h2 class="blogpost_heading-{{section.id}}">Featured Blogs</h2>
+    <div class="blogpost-container container">
+      <div class="blogpost-content flex">
+        {% for article in section.settings.blog.articles limit: 4 %}
+          <div>
+            {% render 'blog-card', article: article %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endif %}
