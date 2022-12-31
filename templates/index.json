@@ -3,26 +3,6 @@
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d": {
       "type": "slideshow",
       "blocks": {
-        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5": {
-          "type": "slideshow-block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/img_main.png",
-            "heading_text": "NEW BASICS",
-            "heading_text_color": "#ffffff",
-            "para_text": "THE ART OF STYLE",
-            "para_text_color": "#ffffff",
-            "button_text_1": "SHOP NEW IN",
-            "button_link_1": "shopify:\/\/blogs\/news\/technology",
-            "button_bcg_color_1": "#ffffff",
-            "button_text_color_1": "#000000",
-            "button_text_2": "SHOP ALL",
-            "button_link_2": "shopify:\/\/blogs\/news",
-            "button_bcg_color_2": "rgba(0,0,0,0)",
-            "button_text_color_2": "#ffffff",
-            "content_position": "align-end justify-end",
-            "text_alignment": "text-left"
-          }
-        },
         "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a": {
           "type": "slideshow-block",
           "settings": {
@@ -42,11 +22,31 @@
             "content_position": "align-center justify-center",
             "text_alignment": "text-left"
           }
+        },
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5": {
+          "type": "slideshow-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_main.png",
+            "heading_text": "NEW BASICS",
+            "heading_text_color": "#ffffff",
+            "para_text": "THE ART OF STYLE",
+            "para_text_color": "#ffffff",
+            "button_text_1": "SHOP NEW IN",
+            "button_link_1": "shopify:\/\/blogs\/news\/technology",
+            "button_bcg_color_1": "#ffffff",
+            "button_text_color_1": "#000000",
+            "button_text_2": "SHOP ALL",
+            "button_link_2": "shopify:\/\/blogs\/news",
+            "button_bcg_color_2": "rgba(0,0,0,0)",
+            "button_text_color_2": "#ffffff",
+            "content_position": "align-end justify-end",
+            "text_alignment": "text-left"
+          }
         }
       },
       "block_order": [
-        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5",
-        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a"
+        "4f7f7d03-35e1-4da9-ab50-c47c27bf7c5a",
+        "88b887c9-53ad-44ce-94a0-ccf54bcd95a5"
       ],
       "settings": {
       }
@@ -203,9 +203,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_34.png",
             "heading_text": "MODERN",
-            "heading_text_color": "#000",
+            "heading_text_color": "#000000",
             "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
-            "paragraph_text_color": "#000"
+            "paragraph_text_color": "#000000"
           }
         },
         "dd4f8403-80d2-42ac-89dd-7d02c4a03c51": {
@@ -213,9 +213,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_33.png",
             "heading_text": "MODULAR",
-            "heading_text_color": "#000",
+            "heading_text_color": "#000000",
             "pargraph_text": "<p>Expect effortless everyday wear with a hint of quirk that can be easily mixed and matched with pieces from the wearer’s own.<\/p>",
-            "paragraph_text_color": "#000"
+            "paragraph_text_color": "#000000"
           }
         },
         "5f0ef0b7-901f-4eb8-b990-038ae4af9c3c": {
@@ -223,9 +223,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_31.png",
             "heading_text": "Unconventional",
-            "heading_text_color": "#000",
+            "heading_text_color": "#000000",
             "pargraph_text": "<p>Drawing inspirations from everyday life, the collections are defined by a feminine yet androgynous style from the menu.<\/p>",
-            "paragraph_text_color": "#000"
+            "paragraph_text_color": "#000000"
           }
         },
         "aa38c498-6327-4488-98e4-c0186f3d7ab7": {
@@ -233,9 +233,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/img_32.png",
             "heading_text": "Timeless",
-            "heading_text_color": "#000",
+            "heading_text_color": "#000000",
             "pargraph_text": "<p>Made to last beyond seasons. Every piece is thoughtfully designed for the modern-day woman who needs high-mileage .<\/p>",
-            "paragraph_text_color": "#000"
+            "paragraph_text_color": "#000000"
           }
         }
       },
