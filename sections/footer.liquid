@@ -23,13 +23,11 @@
     <div>
       <h3>{{ section.settings.column3_heading_text }}</h3>
       {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'list_blocks' %}
-          <ul>
-            <li class="mt-1">{{ block.type.list_blocks.list_text }}</li>
+        {% if block.type == 'list_blocks' %}
+          <ul class="flex column">
+            <li>{{ block.settings.list_text }}</li>
           </ul>
-        </div>
-      {% endcase %}
+        {% endif %}
       {% endfor %}
     </div>
     <div>
@@ -44,32 +42,30 @@
       </div>
       {% endcomment %}
 
-      <div>
-        {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social flex align-center" role="list">
-              <li class="list-social__item">
-                <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-                  {%- render 'icon-twitter' -%}
-                </a>
-              </li>
-              <li class="list-social__item">
-                <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-                  {%- render 'icon-facebook' -%}
-                </a>
-              </li>
-              <li class="list-social__item">
-                <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-                  {%- render 'icon-instagram' -%}
-                </a>
-              </li>
-              <li class="list-social__item">
-                <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
-                  {%- render 'icon-linkedin' -%}
-                </a>
-              </li>
-          </ul>
-        {%- endif -%}
-      </div>
+      {%- if section.settings.show_social -%}
+        <ul class="footer__list-social list-unstyled list-social flex align-center" role="list">
+          <li class="list-social__item">
+            <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
+              {%- render 'icon-twitter' -%}
+            </a>
+          </li>
+          <li class="list-social__item">
+            <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+              {%- render 'icon-facebook' -%}
+            </a>
+          </li>
+          <li class="list-social__item">
+            <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
+              {%- render 'icon-instagram' -%}
+            </a>
+          </li>
+          <li class="list-social__item">
+            <a href="{{ settings.social_linkedin_link }}" class="link list-social__link">
+              {%- render 'icon-linkedin' -%}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
 
     </div>
   </div>

@@ -295,8 +295,9 @@ a {
   display: flex;
   flex-direction: Column;
   margin: 0 auto;
-  padding: 1.75rem 0;
+  padding: 1rem 0;
   margin-top: 5.5rem;
+  width: 100vw;
 }
 
 .footer__content {
@@ -337,6 +338,17 @@ a {
   height: 4.5rem;
 }
 
+@media only screen and (max-width: 793px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    row-gap: 3.2rem;
+  }
+
+  .footer__bottom-content {
+    flex-direction: column;
+  }
+}
 
 
 /***********************Blogpost Section*************************/
