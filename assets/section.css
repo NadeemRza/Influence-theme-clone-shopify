@@ -105,7 +105,7 @@ section + section {
 }
 
 
-/*******************Image With Text Section 2**********************/
+/*******************Image With Text Section 1**********************/
 .flex-box{
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +116,7 @@ section + section {
   margin: 0 auto;
   /* margin: 0 auto 0 1.5rem; */
   justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .flexbox_item{
