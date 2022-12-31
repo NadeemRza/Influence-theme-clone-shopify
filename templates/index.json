@@ -237,6 +237,60 @@
         "heading_alignment": "left-align",
         "content_background_color": "#ecf1f5"
       }
+    },
+    "1909d765-5894-4518-83b3-85ef0cf843cc": {
+      "type": "modern-shop",
+      "blocks": {
+        "4315e54c-654a-4bea-bba4-e6a3ae67a03f": {
+          "type": "img_text_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_34.png",
+            "heading_text": "MODERN",
+            "heading_text_color": "#000",
+            "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
+            "paragraph_text_color": "#000"
+          }
+        },
+        "dd4f8403-80d2-42ac-89dd-7d02c4a03c51": {
+          "type": "img_text_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b_img_24.png",
+            "heading_text": "MODERN",
+            "heading_text_color": "#000",
+            "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
+            "paragraph_text_color": "#000"
+          }
+        },
+        "5f0ef0b7-901f-4eb8-b990-038ae4af9c3c": {
+          "type": "img_text_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_31.png",
+            "heading_text": "MODERN",
+            "heading_text_color": "#000",
+            "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
+            "paragraph_text_color": "#000"
+          }
+        },
+        "aa38c498-6327-4488-98e4-c0186f3d7ab7": {
+          "type": "img_text_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_32.png",
+            "heading_text": "MODERN",
+            "heading_text_color": "#000",
+            "pargraph_text": "<p>Modern ready-to-wear fashion brand with a focus on design, comfort and quality. Clean lines, soft shapes and subtle details.<\/p>",
+            "paragraph_text_color": "#000"
+          }
+        }
+      },
+      "block_order": [
+        "4315e54c-654a-4bea-bba4-e6a3ae67a03f",
+        "dd4f8403-80d2-42ac-89dd-7d02c4a03c51",
+        "5f0ef0b7-901f-4eb8-b990-038ae4af9c3c",
+        "aa38c498-6327-4488-98e4-c0186f3d7ab7"
+      ],
+      "settings": {
+        "background_color": "#ece2cc"
+      }
     }
   },
   "order": [
@@ -246,6 +300,7 @@
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
     "56ae2041-496e-41fc-abb6-242846a77479",
-    "c035ac9e-25ac-4182-ade0-4290dae94fea"
+    "c035ac9e-25ac-4182-ade0-4290dae94fea",
+    "1909d765-5894-4518-83b3-85ef0cf843cc"
   ]
 }
