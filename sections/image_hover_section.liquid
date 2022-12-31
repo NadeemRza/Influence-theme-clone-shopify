@@ -1,0 +1,223 @@
+<div class="image__hover__container">
+  <div class="image__hover-headings-container {{section.settings.heading_alignment}}">
+    <h3 class="image__hover__heading1 upper">{{ section.settings.heading_text_1 }}</h3>
+    <h1 class="image-hover__heading2 upper">{{ section.settings.heading_text_2 }}</h1>
+  </div>
+  <div data-flickity='{ "cellAlign": "left", "contain": true }'>
+    <div class="image__hover-blocks-container">
+      {% for block in section.blocks %}
+        <div class="image__hover__image-container-1 image__hover-blocks">
+          {% assign mobile_image_1 = block.settings.image_mobile_1 | default: block.settings.image_1 %}
+          {% render 'image', class: 'image__hover__image', mobileSrc: mobile_image_1, desktopSrc: block.settings.image_1 %}
+        </div>
+        <div class="image__hover__content-container-1 image__hover-blocks">
+          <h3 class="image__hover__content-container-heading-{{block.id}}-1 upper">{{ block.settings.heading_text_1 }}</h3>
+          <p class="image__hover__content-container-paragraph-{{block.id}}-1" id="paragraph_1">{{ block.settings.paragraph_text_1 }}</p>
+        </div>
+
+        <div class="image__hover__image-container-2 image__hover-blocks">
+          {% assign mobile_image_2 = block.settings.image_mobile_2 | default: block.settings.image_2 %}
+          {% render 'image', class: 'image__hover__image', mobileSrc: mobile_image_2, desktopSrc: block.settings.image_2 %}
+        </div>
+        <div class="image__hover__content-container-2 image__hover-blocks">
+          <h3 class="image__hover__content-container-heading-{{block.id}}-2 upper">{{ block.settings.heading_text_2 }}</h3>
+          <p class="image__hover__content-container-paragraph-{{block.id}}-2" id="paragraph_2">{{ block.settings.paragraph_text_2 }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .image__hover__heading1 {
+    color: {{ section.settings.heading_text_1_color}}
+    ;
+  }
+
+  .image__hover__heading2 {
+    color: {{ section.settings.heading_text_2_color}}
+    ;
+  }
+
+  .image__hover__content-container-1,
+  .image__hover__content-container-2 {
+    background-color: {{ section.settings.content_background_color}}
+    ;
+  }
+
+  {% for block in section.blocks %}
+    .image__hover__content-container-heading-{{ block.id}}-1 {
+      color: {{ block.settings.heading_text_color_1}}
+      ;
+    }
+
+    #paragraph_1 {
+      color: {{ block.settings.paragraph_text_color_1}}
+      ;
+      line-height: 1.5;
+    }
+
+    .image__hover__content-container-heading-{{ block.id}}-2 {
+      color: {{ block.settings.heading_text_color_2}}
+      ;
+    }
+
+    #paragraph_2 {
+      color: {{ block.settings.paragraph_text_color_2}}
+      ;
+      line-height: 1.5;
+    }
+  {% endfor %}
+{% endstyle %}
+
+
+{% schema %}
+  {
+    "name": "Image Text Hover Section",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "text",
+        "id": "heading_text_1",
+        "label": "Heading Text 1",
+        "default": "Our Manufacturing Process"
+      },
+      {
+        "type": "color",
+        "id": "heading_text_1_color",
+        "label": "Heading Text 1 color",
+        "default": "#261d09"
+      },
+      {
+        "type": "text",
+        "id": "heading_text_2",
+        "label": "Heading Text 2",
+        "default": "SUSTAINABILITY"
+      }, {
+        "type": "color",
+        "id": "heading_text_2_color",
+        "label": "Heading Text 2 color",
+        "default": "#261d09"
+      }, {
+        "type": "select",
+        "id": "heading_alignment",
+        "label": "Heading Alignment",
+        "options": [
+          {
+            "value": "left-align",
+            "label": "Left"
+          }, {
+            "value": "center-align",
+            "label": "Center"
+          }, {
+            "value": "right-align",
+            "label": "Right"
+          }
+        ],
+        "default": "left-align"
+      }, {
+        "type": "header",
+        "content": "Content Background"
+      }, {
+        "type": "color",
+        "id": "content_background_color",
+        "label": "Color",
+        "default": "#ecf1f5"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Image Blocks",
+        "type": "image_blocks",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Block 1"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile_1",
+            "label": "Image (Mobile) 1",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "header",
+            "content": "Content 1"
+          }, {
+            "type": "text",
+            "id": "heading_text_1",
+            "label": "Block Heading Text 1",
+            "default": "Fabric & Materials"
+          }, {
+            "type": "color",
+            "id": "heading_text_color_1",
+            "label": "Block Heading Text 1 Color",
+            "default": "#261d09"
+          }, {
+            "type": "textarea",
+            "id": "paragraph_text_1",
+            "label": "Paragraph Text 1",
+            "default": "<p>Fabric choice is an important element in our design process and we only use the highest quality European, Japanese or Korean fabrics.</p>"
+          }, {
+            "type": "color",
+            "id": "paragraph_text_color_1",
+            "label": "Paragraph Text color 1",
+            "default": "#261d09"
+          }, {
+            "type": "header",
+            "content": "Block 2"
+          }, {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2",
+            "info": "1200 x 500px .jpg recommended"
+          }, {
+            "type": "image_picker",
+            "id": "image_mobile_2",
+            "label": "Image (Mobile) 2",
+            "info": "600 x 800px .jpg recommended"
+          }, {
+            "type": "header",
+            "content": "Content 2"
+          }, {
+            "type": "text",
+            "id": "heading_text_2",
+            "label": "Block Heading Text 2",
+            "default": "Designed for life"
+          }, {
+            "type": "color",
+            "id": "heading_text_color_2",
+            "label": "Block Heading Text 2 Color",
+            "default": "#261d09"
+          }, {
+            "type": "textarea",
+            "id": "paragraph_text_2",
+            "label": "Paragraph Text 2",
+            "default": "<p>We dont believe in fast fashion or throw away culture. To ensure our pieces will be worn for a lifetime we create clothes which have good drape, are non-sheer and feel comfortable to the skin.</p>"
+          }, {
+            "type": "color",
+            "id": "paragraph_text_color_2",
+            "label": "Paragraph Text color 2",
+            "default": "#261d09"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Text Hover Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -570,3 +570,58 @@ a {
       grid-template-columns: 1fr;
     }
   }
+
+
+/*******************Image Text Hover Section**********************/
+.image__hover-headings-container {
+  width: 90vw;
+  max-width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.image__hover-blocks-container {
+  width: 90vw;
+  max-width: 90%;
+  margin: 2.2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.image__hover__image-container-1,
+.image__hover__image-container-2 {
+  padding: auto 10%;
+}
+
+.image__hover__content-container-1,
+  .image__hover__content-container-2 {
+    /* padding: 35.9% 10%; */
+    padding: 12.5rem 10%;
+    margin-left: -15.5%;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 1331px) {
+    .image__hover__content-container-1,
+    .image__hover__content-container-2 {
+      padding: 0 10%;
+      max-height: 31.3rem;
+    };
+
+    .image__hover__image {
+      min-height: 34rem;
+    }
+  }
+
+  @media only screen and (max-width: 990px) {
+    .image__hover-blocks-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media only screen and (max-width: 749px) {
+    .image__hover-blocks-container {
+      grid-template-columns: 1fr;
+    }
+  }
