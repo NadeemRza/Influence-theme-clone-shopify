@@ -210,23 +210,27 @@ a {
     font-weight: bold;
   }
 
+  .parent:hover .navbar-title {
+    border-bottom: 2px solid #000;
+  }
+
   .parent:hover .child {
     display: block;
   }
 
   .child {
-    background-color: #dbc9a0;
+    background-color: #f3ebd9;
     position: relative;
-    top: 0.25rem;
+    top: 0.75rem;
     z-index: 1;
     display: none;
-    padding: 1.2rem 0.5rem;
+    padding: 1.35rem 0.5rem;
     border-radius: 0.5rem;
     opacity: 0.973;
   }
 
   .grandchild {
-    background-color: #dbc9a0;
+    background-color: #f3ebd9;
     position: relative;
     z-index: 1;
   }
@@ -241,12 +245,49 @@ a {
     position: relative;
     top: 1.5rem;
     left: 2rem;
+    color: #261d09;
   }
 
   .header__logo-text {
     font-weight: bold;
     text-transform: uppercase;
     color: #2f2e21;
+    font-size: 3rem;
+  }
+
+  .currency__selector {
+    outline: 1px solid #261d09;
+    border-radius: 0.5rem;
+    padding: 0 0.8rem;
+    margin-right: 2rem;
+  }
+
+  .mobile_links {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1105px) {
+    .user-icon {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1072px) {
+    .search-icon{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1029px) {
+    .cart-icon {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 986px) {
+    .currency__selector {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: 749px) {
@@ -258,6 +299,10 @@ a {
     ul {
       font-size: 1.3rem;
       margin-left: -2.5rem;
+    }
+
+    .mobile_links {
+      display: block;
     }
   }
 
@@ -283,12 +328,18 @@ a {
       justify-content: space-between;
       max-width: 90vw;
     }
-
-    .cart-icon {
-      display: none;
-    }
   }
 
+  .search-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-left: 1.75rem;
+  }
+
+  .user-icon {
+    color: #261d09;
+    margin-left: 1.3rem;
+  }
 
 /*******************Footer************************/
 .footer {
@@ -425,6 +476,7 @@ a {
   bottom: 0.5rem;
   background-color: #261d09;
   color: #fff;
+  border-radius: 0.75rem;
 }
 
 .pimg{

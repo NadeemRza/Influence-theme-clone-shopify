@@ -1,0 +1,10 @@
+<div class="product-card flex height--custom">
+    {% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}}, desktopSrc: {{product.featured_image}} %}
+    <div>
+        <h4 class="product-card__heading">{{ product.title }}</h4>
+        <p class="mt-1 fw-sb" id="product-card__price">MRP: {{ product.price | money }}
+        {% if product.compare_at_price > product.price %}
+           <s>{{ product.compare_at_price_max | money }}</s>
+        {% endif %}
+    </div>
+</div>

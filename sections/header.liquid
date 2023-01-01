@@ -11,7 +11,7 @@
     <ul class="parent flex">
       {% for link in section.settings.linklist.links %}
         <li>
-          <a href="{{ link.url }}">{{ link.title }}</a>
+          <a class="navbar-title" href="{{ link.url }}">+ {{ link.title }}</a>
           {% if link.links != blank %}
             <ul class="child">
               {% for child_link in link.links %}
@@ -33,10 +33,42 @@
         </li>
       {% endfor %}
     </ul>
+    <ul class="mobile_links">
+      {% for link in section.settings.linklist_mobile.links %}
+        <li>
+          <a class="" href="{{ link.url }}">+ {{ link.title }}</a>
+          {% if link.links != blank %}
+            <ul class="child_mob">
+              {% for child_link in link.links %}
+                <li>
+                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                  {% if child_link.links != blank %}
+                    <ul class="grandchild_mob">
+                      {% for grandchild_link in child_link.links %}
+                        <li>
+                          <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
   <div class="button-plus-icons">
+    <select class="currency__selector" name="country_info" id="country_info">
+      {% for country in localization.available_countries %}
+        <option>{{country.name}} ({{country.currency.symbol}})</option>
+      {% endfor %}
+    </select>
     <button class="button button-{{section.id}}">{{ section.settings.button_text }}</button>
     <i class="fa-solid fa-bars" id="bar-icon"></i>
+    <a href="{{routes.search_url}}"><img class="search-icon" src="{{'search-icon.png' | asset_url}}" alt="" srcset=""></a>
+    <a class="user-icon" href="{{ routes.account_url }}">{%- render 'icon-user' -%}</a>
     <a href="{{ routes.cart_url }}" class="cart-icon">
       {%- render 'icon-cart' -%}
 
@@ -70,7 +102,7 @@
 
   .button-{{ section.id}}{
     border-radius: 1rem;
-    background-color: {{ section.settings.button_background_color}}
+    background-color: {{ section.settings.button_background_color}} !important
     ;
     color: {{ section.settings.button_text_color}}
     ;
