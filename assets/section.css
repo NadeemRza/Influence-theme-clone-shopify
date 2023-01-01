@@ -357,6 +357,23 @@ a {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 749px) {
+  .blogpost-content {
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  .blog-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 749px) {
+  .blogpost-section {
+    overflow: scroll;
+  }
+}
+
 .article-color {
   color: #261d09;
 }

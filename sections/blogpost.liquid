@@ -4,7 +4,7 @@
     <div class="blogpost-container container">
       <div class="blogpost-content flex">
         {% for article in section.settings.blog.articles limit: 4 %}
-          <div>
+          <div class="blog-card">
             {% render 'blog-card', article: article %}
           </div>
         {% endfor %}
