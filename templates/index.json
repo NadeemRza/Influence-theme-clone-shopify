@@ -144,6 +144,53 @@
         "content_position": "align-start justify-end"
       }
     },
+    "275bbe70-e152-41c7-9d55-77defab557b4": {
+      "type": "image-with-text-1",
+      "blocks": {
+        "f6c18501-22b9-4e99-be32-3f73bdd11453": {
+          "type": "content_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imgwt.png",
+            "image_position": "img-left",
+            "caption_text": "MAKE A STATEMENT",
+            "caption_text_color": "#271e0a",
+            "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP NOW",
+            "button_link": "shopify:\/\/blogs\/news",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#ffffff",
+            "text_alignment": "text-right"
+          }
+        }
+      },
+      "block_order": [
+        "f6c18501-22b9-4e99-be32-3f73bdd11453"
+      ],
+      "settings": {
+        "content_background_color": "#ecf1f5"
+      }
+    },
+    "106ac273-8b46-47b2-820c-ddb2ec1497a0": {
+      "type": "backgound-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg_img.png",
+        "heading_text": "FASHION: DESIGNED FOR LIFE",
+        "heading_text_color": "#ffffff",
+        "para_text": "CELEBRATE COMFORT",
+        "para_text_color": "#ffffff",
+        "button_text_1": "SHOP DRESSES",
+        "button_link_1": "shopify:\/\/collections\/all",
+        "button_bcg_color_1": "#ffffff",
+        "button_text_color_1": "#000000",
+        "button_text_2": "SHOP ONE PIECES",
+        "button_link_2": "shopify:\/\/collections\/all",
+        "button_bcg_color_2": "rgba(0,0,0,0)",
+        "button_text_color_2": "#ffffff",
+        "content_position": "align-end justify-start",
+        "text_alignment": "text-left"
+      }
+    },
     "fc99e56d-6b26-4264-957c-300b6ddd89ad": {
       "type": "testimonial",
       "blocks": {
@@ -167,32 +214,48 @@
       "settings": {
       }
     },
-    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
-      "type": "blogpost",
+    "111f1817-da52-42e0-a934-33df382be8b7": {
+      "type": "image-with-text-2",
+      "blocks": {
+        "b1c3f0f4-138f-4d9d-90ef-d8dc957511f6": {
+          "type": "content_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_51.png",
+            "image_position": "img-left",
+            "caption_text": "Look",
+            "caption_text_color": "#271e0a",
+            "heading_text": "STATEMENT SEAMS AND CLEAN LINES",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP THE LOOK",
+            "button_link": "",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#fff",
+            "text_alignment": "text-center"
+          }
+        },
+        "426368f5-e3df-4f26-8f72-03ad654c60e3": {
+          "type": "content_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_51.png",
+            "image_position": "img-left",
+            "caption_text": "Look",
+            "caption_text_color": "#271e0a",
+            "heading_text": "STATEMENT SEAMS AND CLEAN LINES",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP THE LOOK",
+            "button_link": "",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#fff",
+            "text_alignment": "text-center"
+          }
+        }
+      },
+      "block_order": [
+        "b1c3f0f4-138f-4d9d-90ef-d8dc957511f6",
+        "426368f5-e3df-4f26-8f72-03ad654c60e3"
+      ],
       "settings": {
-        "blog": "news",
-        "heading_text_color": "#000000",
-        "heading_position": "left"
-      }
-    },
-    "106ac273-8b46-47b2-820c-ddb2ec1497a0": {
-      "type": "backgound-image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/bg_img.png",
-        "heading_text": "FASHION: DESIGNED FOR LIFE",
-        "heading_text_color": "#ffffff",
-        "para_text": "CELEBRATE COMFORT",
-        "para_text_color": "#ffffff",
-        "button_text_1": "SHOP DRESSES",
-        "button_link_1": "shopify:\/\/collections\/all",
-        "button_bcg_color_1": "#ffffff",
-        "button_text_color_1": "#000000",
-        "button_text_2": "SHOP ONE PIECES",
-        "button_link_2": "shopify:\/\/collections\/all",
-        "button_bcg_color_2": "rgba(0,0,0,0)",
-        "button_text_color_2": "#ffffff",
-        "content_position": "align-end justify-start",
-        "text_alignment": "text-left"
+        "content_background_color": "#ecf1f5"
       }
     },
     "1909d765-5894-4518-83b3-85ef0cf843cc": {
@@ -261,87 +324,24 @@
         "button_text_color": "#ffffff"
       }
     },
-    "275bbe70-e152-41c7-9d55-77defab557b4": {
-      "type": "image-with-text-1",
-      "blocks": {
-        "f6c18501-22b9-4e99-be32-3f73bdd11453": {
-          "type": "content_blocks",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/imgwt.png",
-            "image_position": "img-left",
-            "caption_text": "MAKE A STATEMENT",
-            "caption_text_color": "#271e0a",
-            "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
-            "heading_text_color": "#271e0a",
-            "button_text": "SHOP NOW",
-            "button_link": "shopify:\/\/blogs\/news",
-            "button_background_color": "#271e0a",
-            "button_text_color": "#ffffff",
-            "text_alignment": "text-right"
-          }
-        }
-      },
-      "block_order": [
-        "f6c18501-22b9-4e99-be32-3f73bdd11453"
-      ],
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
+      "type": "blogpost",
       "settings": {
-        "content_background_color": "#ecf1f5"
-      }
-    },
-    "111f1817-da52-42e0-a934-33df382be8b7": {
-      "type": "image-with-text-2",
-      "blocks": {
-        "b1c3f0f4-138f-4d9d-90ef-d8dc957511f6": {
-          "type": "content_blocks",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/img_51.png",
-            "image_position": "img-left",
-            "caption_text": "Look",
-            "caption_text_color": "#271e0a",
-            "heading_text": "STATEMENT SEAMS AND CLEAN LINES",
-            "heading_text_color": "#271e0a",
-            "button_text": "SHOP THE LOOK",
-            "button_link": "",
-            "button_background_color": "#271e0a",
-            "button_text_color": "#fff",
-            "text_alignment": "text-center"
-          }
-        },
-        "426368f5-e3df-4f26-8f72-03ad654c60e3": {
-          "type": "content_blocks",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/img_51.png",
-            "image_position": "img-left",
-            "caption_text": "Look",
-            "caption_text_color": "#271e0a",
-            "heading_text": "STATEMENT SEAMS AND CLEAN LINES",
-            "heading_text_color": "#271e0a",
-            "button_text": "SHOP THE LOOK",
-            "button_link": "",
-            "button_background_color": "#271e0a",
-            "button_text_color": "#fff",
-            "text_alignment": "text-center"
-          }
-        }
-      },
-      "block_order": [
-        "b1c3f0f4-138f-4d9d-90ef-d8dc957511f6",
-        "426368f5-e3df-4f26-8f72-03ad654c60e3"
-      ],
-      "settings": {
-        "content_background_color": "#ecf1f5"
+        "blog": "news",
+        "heading_text_color": "#000000",
+        "heading_position": "left"
       }
     }
   },
   "order": [
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
     "0827d88e-8db3-43e3-aa47-e634432714e5",
-    "fc99e56d-6b26-4264-957c-300b6ddd89ad",
-    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
+    "275bbe70-e152-41c7-9d55-77defab557b4",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
+    "fc99e56d-6b26-4264-957c-300b6ddd89ad",
+    "111f1817-da52-42e0-a934-33df382be8b7",
     "1909d765-5894-4518-83b3-85ef0cf843cc",
     "56ae2041-496e-41fc-abb6-242846a77479",
-    "275bbe70-e152-41c7-9d55-77defab557b4",
-    "111f1817-da52-42e0-a934-33df382be8b7"
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88"
   ]
 }
