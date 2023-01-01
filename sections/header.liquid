@@ -34,19 +34,20 @@
       {% endfor %}
     </ul>
     <ul class="mobile_links">
-      {% for link in section.settings.linklist_mobile.links %}
+      {% for link_mob in section.settings.linklist_mobile.links %}
         <li>
-          <a class="" href="{{ link.url }}">+ {{ link.title }}</a>
-          {% if link.links != blank %}
+          <a class="" href="{{ link_mob.url }}">+ {{ link_mob.title }}</a>
+          <hr>
+          {% if link_mob.links != blank %}
             <ul class="child_mob">
-              {% for child_link in link.links %}
+              {% for m_child_link in link_mob.links %}
                 <li>
-                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
-                  {% if child_link.links != blank %}
+                  <a href="{{ mob_child_link.url }}">{{ mob_child_link.title }}</a>
+                  {% if mob_child_link.links != blank %}
                     <ul class="grandchild_mob">
-                      {% for grandchild_link in child_link.links %}
+                      {% for mob_grandchild_link in mob_child_link.links %}
                         <li>
-                          <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          <a href="{{ mob_grandchild_link.url }}">{{ mob_grandchild_link.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
@@ -124,6 +125,14 @@
     }
   }
 {% endstyle %}
+
+<script> 
+  let bars = document.querySelector('#bar-icon');
+  let list = document.querySelector('.mobile_links')
+  bars.addEventListener('click', () => {
+    list.style.display === 'none' ? 'block' : 'none';
+  })
+  </script>
 
 {% schema %}
   {

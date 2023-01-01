@@ -296,13 +296,10 @@ a {
       justify-content: flex-start;
       column-gap: 0.8rem;
     }
+
     ul {
       font-size: 1.3rem;
       margin-left: -2.5rem;
-    }
-
-    .mobile_links {
-      display: block;
     }
   }
 
@@ -318,16 +315,34 @@ a {
     }
 
 
-
     /* #bar-icon:hover .parent {
       display: flex;
     } */
 
     .header {
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: space-between;
       max-width: 90vw;
+      margin: 0 auto;
+      position: relative;
     }
+
+    .mobile_links {
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      background-color: #f3ebd9;
+      width: 100vw;
+      z-index: 1;
+      display: none;
+      border-radius: 1.2rem;
+    }
+
+    .header__logo-text {
+      font-size: 2rem;
+    }
+
+    
   }
 
   .search-icon {
