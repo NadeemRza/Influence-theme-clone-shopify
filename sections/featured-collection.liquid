@@ -1,10 +1,10 @@
 {% if section.settings.collection_id != blank %}
-  <div class="page-width featured-collection">
+  <div class="featured-collection">
     <div class="featured-collection__heading h2 heading1">Best Selling Dresses</div>
-    <div class="grid grid--1-col grid--4-col-desktop">
+    <div class="grid--1-col .grid__item grid--4-col-desktop .grid__item">
       {% assign product_limit = section.settings.product_limit %}
       {% for product in section.settings.collection_id.products %}
-        <div class="grid__item featured-collection__content mt-1">
+        <div class="grid__item featured-collection__content mt-1 flex justify-between">
           <div class="featured-collection__card">
             {% render 'product-card', product: product %}
           </div>
@@ -46,7 +46,7 @@
         "type": "color",
         "id": "heading_text_color",
         "label": "Heading Color",
-        "default": "#000"
+        "default": "#261d09"
       }, {
         "type": "select",
         "id": "heading_position",

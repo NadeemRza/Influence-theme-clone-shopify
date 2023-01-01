@@ -58,15 +58,19 @@ section + section {
 /***********************Featured Collection Section******************/
 .featured-collection{
   margin-bottom: 500px;
+  width: 90vw;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
-/* .featured-collection__card{
-  margin: 0 0.75rem;
-} */
+.featured-collection__card{
+  /* width: calc(100% / 6); */
+}
 
 .featured-collection__content{
   margin-top: 1rem;
   /* background-color: #f1ecec; */
+  width: 90vw;
 }
 
 
@@ -394,8 +398,16 @@ a {
   gap: 0.8rem;
   border: 1px solid rgb(244, 236, 236);
   align-items: center;
-  padding: 0.2rem 0.45rem 0;
+  padding: 1.5rem 2rem 3.2rem;
   background-color: #f3f0f8;
+  border-radius: 0.45rem;
+}
+
+.product-card__button {
+  position: relative;
+  bottom: 0.5rem;
+  background-color: #261d09;
+  color: #fff;
 }
 
 .pimg{
@@ -406,12 +418,12 @@ a {
 .product-card__heading{
   font-size: 2rem;
   margin-top: 0.5rem;
-  color: #2d2411;
+  color: #261d09;
   margin-top: 0.4rem;
 }
 
 #product-card__reviews {
-  color: #2d2411;
+  color: #261d09;
 }
 
 #product-card__reviews-count {
