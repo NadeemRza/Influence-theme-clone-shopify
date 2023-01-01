@@ -1,0 +1,112 @@
+<div class="sales-section__container">
+  <div class="background_image">
+    {% assign mobile_image = section.settings.image_mobile | default: section.settings.image %}
+    {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
+    <div class="sales-section__content">
+      <div class="sales-section__content-container">
+        <div class="sales-section__content-container-top flex column align-center justify-center">
+          <h2 class="heading-{{section.id}}">{{ section.settings.heading_text }}</h2>
+          <a href="#" class="button button--primary button-{{section.id}}">{{ section.settings.button_text }}</a>
+        </div>
+        <div class="flex sales-section__content-container-bottom align-center">
+          <a href="{{shop.secure_url}}">
+            {%- render 'icon-insta' -%}
+          </a>
+          <div class="logo-text-{{section.id}}">{{ section.settings.logo_text }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .heading-{{ section.id}}{
+    font-size: 4.5rem;
+  }
+
+  .button-{{ section.id}}{
+    margin-top: 0.75rem;
+    background-color: {{ section.settings.button_background_color}}
+    ;
+    color: {{ section.settings.button_text_color}}
+    ;
+  }
+
+  .logo-text-{{ section.id}}{
+    margin-left: 1.3rem;
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Sale Section",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background Image",
+        "info": "1200 x 500px .jpg recommended"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Background Image (Mobile)",
+        "info": "600 x 800px .jpg recommended"
+      },
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": "UP TO 25% OFF"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#271e0a"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "SHOP THE SALE"
+      }, {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#271e0a"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      }, {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo Image",
+        "info": "1200 x 500px .jpg recommended"
+      }, {
+        "type": "image_picker",
+        "id": "logo_image_mobile",
+        "label": "Logo Image (Mobile)",
+        "info": "600 x 800px .jpg recommended"
+      }, {
+        "type": "text",
+        "id": "logo_text",
+        "label": "Logo Text",
+        "default": "See it styled on Insta"
+      }, {
+        "type": "color",
+        "id": "logo_text_color",
+        "label": "Logo Text Color",
+        "default": "#fff"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sale Section"
+      }
+    ]
+  }
+{% endschema %}
