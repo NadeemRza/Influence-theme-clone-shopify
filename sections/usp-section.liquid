@@ -1,17 +1,35 @@
-<div class="usp-section__container flex">
-  <div class="usp-section__content flex">
-    {% for block in section.blocks %}
-      <div>
-        {% assign logo_image = block.settings.logo_mobile | default: blocks.settings.logo %}
-        {% render 'image', class: '', mobileSrc: logo_image, desktopSrc: block.settings.logo %}
+{% if section.blocks.size > 0 %}
+  <div class="usp-section__main-container">
+    <div class="usp-section__content flex">
+      {% for block in section.blocks %}
+        <div class="flex">
+          <div>
+            {% assign icon_image = block.settings.icon_mobile | default: blocks.settings.icon %}
+            {% render 'image', class: 'usp-section__image', mobileSrc: icon_image, desktopSrc: block.settings.icon %}
+          </div>
+          <div class="usp-section__content-text flex column">
+
+            {% if block.settings.icon_heading_text != blank %}
+              <h6 class="usp-section__heading">{{ block.settings.icon_heading_text }}</h6>
+            {% endif %}
+
+            {% if block.settings.icon_paragraph_text != blank %}
+              <p class="usp-section__paragraph">{{ block.settings.icon_paragraph_text }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+
       </div>
-      <div class="usp-section__content-text flex column">
-        <h4>{{ block.settings.logo_heading_text }}</h4>
-        <p>{{ block.settings.logo_paragraph_text }}</p>
-      </div>
-    {% endfor %}
+    </div>
   </div>
-</div>
+{% endif %}
+
+{% style %}
+  .usp-section__container {
+    background-color: {{ section.settings.background_color}}
+    ;
+  }
+{% endstyle %}
 
 {% schema %}
   {
@@ -34,35 +52,35 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "logo",
+            "id": "icon",
             "label": "Image",
-            "info": "1200 x 500px .jpg recommended"
+            "info": "60 x 49px .jpg recommended"
           },
           {
             "type": "image_picker",
-            "id": "logo_mobile",
+            "id": "icon_mobile",
             "label": "Image (Mobile)",
             "info": "600 x 800px .jpg recommended"
           },
           {
             "type": "text",
-            "id": "logo_heading_text",
+            "id": "icon_heading_text",
             "label": "Heading Text",
             "default": "Free delivery worldwide"
           },
           {
             "type": "color",
-            "id": "logo_heading_text_color",
+            "id": "icon_heading_text_color",
             "label": "Heading Color",
             "default": "#000"
           }, {
             "type": "text",
-            "id": "logo_paragraph_text",
+            "id": "icon_paragraph_text",
             "label": "Pragraph Text",
             "default": "We use trusted transportion partners"
           }, {
             "type": "color",
-            "id": "logo_paragraph_text_color",
+            "id": "icon_paragraph_text_color",
             "label": "Para Color",
             "default": "#000"
           }
@@ -76,3 +94,25 @@
     ]
   }
 {% endschema %}
+
+
+
+{% comment %} 
+{% if icon_image != blank %}
+{% assign icon_image = block.settings.icon_mobile | default: blocks.settings.icon %}
+{% render 'image', class: '', mobileSrc: icon_image, desktopSrc: block.settings.icon %}
+{% else %}
+{% if forloop.index == 1 %}
+<i class="fa-solid fa-box"></i>
+{% endif %}
+{% if forloop.index == 2 %}
+<i class="fa-solid fa-cart-shopping"></i>
+{% endif %}
+{% if forloop.index == 3 %}
+<i class="fa-solid fa-headset"></i>
+{% endif %}
+{% if forloop.index == 4 %}
+<i class="fa-regular fa-credit-card"></i>
+{% endif %}
+{% endif %}
+{% endcomment %}
