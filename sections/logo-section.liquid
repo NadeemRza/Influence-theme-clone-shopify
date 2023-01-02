@@ -1,0 +1,96 @@
+{% if section.blocks.size > 0 %}
+  <div class="main--container">
+    <div class="logo-container">
+      <h2 class="logo_heading mb-10">{{ section.settings.heading_text }}</h2>
+      <div class="flex mob-grid tab-grid logo-container--items">
+        {% for block in section.blocks %}
+          <div>
+            {% assign mobile_image = block.settings.image_mobile | default: blocks.settings.image %}
+            {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% style %}
+  .main--container {
+    background-color: {{ section.settings.bcg_color}}
+    ;
+  }
+
+  .logo_heading {
+    text-align: {{ section.settings.text_alignment}}
+    ;
+    color: {{ section.settings.heading_color}}
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "logo-bar",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading Text",
+        "default": "Logo List"
+      }, {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      }, {
+        "type": "color",
+        "id": "bcg_color",
+        "label": "Background Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#000"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "logo-block",
+        "type": "logo-block",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          }, {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "logo-bar"
+      }
+    ]
+  }
+{% endschema %}

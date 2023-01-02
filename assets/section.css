@@ -60,7 +60,7 @@ section + section {
   margin-bottom: 500px;
   width: 90vw;
   margin: 0 auto;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .featured-collection__card{
@@ -768,4 +768,45 @@ a {
 
 .background_image:hover .background_image > img {
   width: 80vw;
+}
+
+
+/***********************Logo List Section*************************/
+.main--container {
+  width: 100vw;
+  padding: 1rem 0 1.65rem;
+}
+
+.logo-container {
+  width: 95vw;
+  /* border: 1px solid red; */
+  margin: 0 2rem;
+}
+
+.logo-container--items {
+  column-gap: 0.3rem;
+  text-overflow: scroll;
+  /* FIXME: border-radius: 1.5rem; */
+}
+
+.logo_heading {
+  width: 100%;
+}
+
+@media only screen and (max-width: 990px) {
+  .tab-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .mob-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 25px;
+  }
+  .logo_heading{
+      padding: 0 25px;
+  }
 }
