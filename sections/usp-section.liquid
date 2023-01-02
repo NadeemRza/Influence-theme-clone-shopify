@@ -1,0 +1,73 @@
+<div class="usp-section__container flex">
+  <div class="usp-section__content flex">
+    {% for block in section.blocks %}
+      <div>
+        {% assign logo_image = block.settings.logo_mobile | default: blocks.settings.logo %}
+        {% render 'image', class: '', mobileSrc: logo_image, desktopSrc: block.settings.logo %}
+      </div>
+      <div class="usp-section__content-text flex column">
+        <h4>{{ block.settings.logo_heading_text }}</h4>
+        <p>{{ block.settings.logo_paragraph_text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "USP Section",
+    "class": "homepage section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ece2cc"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "USP Blocks",
+        "type": "usp blocks",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Image",
+            "info": "1200 x 500px .jpg recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "logo_mobile",
+            "label": "Image (Mobile)",
+            "info": "600 x 800px .jpg recommended"
+          },
+          {
+            "type": "text",
+            "id": "logo_heading_text",
+            "label": "Heading Text",
+            "default": "Free delivery worldwide"
+          },
+          {
+            "type": "color",
+            "id": "logo_heading_text_color",
+            "label": "Heading Color",
+            "default": "#000"
+          }, {
+            "type": "text",
+            "id": "logo_paragraph_text",
+            "label": "Pragraph Text",
+            "default": "We use trusted transportion partners"
+          }, {
+            "type": "color",
+            "id": "logo_paragraph_text_color",
+            "label": "Para Color",
+            "default": "#000"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
