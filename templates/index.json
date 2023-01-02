@@ -340,6 +340,19 @@
         "heading_text_color": "#000000",
         "heading_position": "left"
       }
+    },
+    "2fba3a4f-f3e3-4efc-bdb9-2707affffdb3": {
+      "type": "sale-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/section_img_1.png",
+        "heading_text": "UP TO 25% OFF",
+        "heading_color": "#271e0a",
+        "button_text": "SHOP THE SALE",
+        "button_background_color": "#271e0a",
+        "button_text_color": "#fff",
+        "logo_text": "See it styled on Insta",
+        "logo_text_color": "#fff"
+      }
     }
   },
   "order": [
@@ -352,6 +365,7 @@
     "111f1817-da52-42e0-a934-33df382be8b7",
     "1909d765-5894-4518-83b3-85ef0cf843cc",
     "56ae2041-496e-41fc-abb6-242846a77479",
-    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88"
+    "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
+    "2fba3a4f-f3e3-4efc-bdb9-2707affffdb3"
   ]
 }
