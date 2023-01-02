@@ -57,7 +57,7 @@
         "settings": {
           "background_color": "#ffffff",
           "logo_text": "Influence",
-          "linklist": "",
+          "linklist": "menu-bar",
           "linklist_mobile": "",
           "text_color": "#2f2e21",
           "button_text": "SignIn",
