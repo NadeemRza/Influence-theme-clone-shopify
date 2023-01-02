@@ -2,13 +2,15 @@
   <div class="main--container">
     <div class="logo-container">
       <h2 class="logo_heading mb-10">{{ section.settings.heading_text }}</h2>
-      <div class="flex mob-grid tab-grid logo-container--items">
-        {% for block in section.blocks %}
-          <div>
-            {% assign mobile_image = block.settings.image_mobile | default: blocks.settings.image %}
-            {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
-          </div>
-        {% endfor %}
+      <div class="flickity_container" data-flickity='{ "autoPlay": true }'>
+        <div class="flex mob-grid tab-grid logo-container--items">
+          {% for block in section.blocks %}
+            <div>
+              {% assign mobile_image = block.settings.image_mobile | default: blocks.settings.image %}
+              {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
@@ -24,7 +26,17 @@
     text-align: {{ section.settings.text_alignment}}
     ;
     color: {{ section.settings.heading_color}}
+  };
+
+  /* .flickity-button {
+    display: none;
   }
+
+  .flickity-page-dots {
+    display: block;
+    margin-top: 0.5rem;
+    color: #fff;
+} */
 {% endstyle %}
 
 {% schema %}
