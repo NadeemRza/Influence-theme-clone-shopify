@@ -6,7 +6,7 @@
       <div class="height-full flex column {{section.settings.content_alignment}}">
         <div class="sales-section__content-container">
           <div class="sales-section__content-container-top center">
-            <h2 class="heading-{{section.id}}">{{ section.settings.heading_text }}</h2>
+            <h2 class="heading-{{section.id}} mobile-heading">{{ section.settings.heading_text }}</h2>
             <a href="#" class="button button--primary button-{{section.id}}">{{ section.settings.button_text }}</a>
           </div>
           <div class="sales-section__content-container-bottom flex align-center justify-center">
@@ -15,7 +15,7 @@
                 {%- render 'icon-insta' -%}
               </a>
             </div>
-            <div class="logo-text-{{section.id}}">{{ section.settings.logo_text }}</div>
+            <div class="logo-text-{{section.id}} mobile-logo-text">{{ section.settings.logo_text }}</div>
           </div>
         </div>
       </div>
@@ -34,6 +34,13 @@
     ;
     color: {{ section.settings.button_text_color}}
     ;
+  }
+
+  @media screen and (max-width: 549px) {
+    .button-{{ section.id}}{
+      padding: 0.5rem !important;
+      font-size: 0.75rem;
+    }
   }
 
   .logo-text-{{ section.id}}{
