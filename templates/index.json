@@ -344,7 +344,6 @@
     },
     "2fba3a4f-f3e3-4efc-bdb9-2707affffdb3": {
       "type": "sale-section",
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/section_img_1.png",
         "heading_text": "UP TO 25% OFF",
