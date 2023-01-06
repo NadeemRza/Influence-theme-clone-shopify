@@ -1,12 +1,12 @@
 {% if section.settings.collection_id != blank %}
   <div class="featured-collection">
     <div class="featured-collection__heading h2 heading1">Best Selling Dresses</div>
-    <div class="grid--1-col .grid__item grid--4-col-desktop .grid__item">
-      {% assign product_limit = section.settings.product_limit %}
+    {% assign product_limit = section.settings.product_limit %}
+    <div class="flex justify-between mt-1">
       {% for product in section.settings.collection_id.products %}
-        <div class="grid__item featured-collection__content mt-1 flex justify-between">
+        <div class="featured-collection__content">
           <div class="featured-collection__card">
-            {% render 'product-card', product: product %}
+            {% render 'product-card-1', product: product %}
           </div>
         </div>
       {% endfor %}

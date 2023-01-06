@@ -9,6 +9,9 @@
           </div>
         {% endfor %}
       </div>
+      <a href="{{blog.articles}}" class="button button--primary button-{{section.id}}">
+        {{ section.settings.button_text }}
+      </a>
     </div>
   </div>
 {% endif %}
@@ -21,6 +24,15 @@
     ;
     padding: 0 2rem;
     /* margin-bottom: 1.2rem; */
+  }
+
+  .button-{{ section.id}}{
+    background-color: {{ section.settings.button_background-color}}
+    ;
+    color: {{ section.settings.button_text_color}}
+    ;
+    border: 2px solid {{ section.settings.button_border_color}};
+    border-radius: {{section.settings.button_border_radius}};
   }
 {% endstyle %}
 
@@ -35,12 +47,14 @@
         "type": "blog",
         "id": "blog",
         "label": "Choose a Blog"
-      }, {
+      },
+      {
         "type": "color",
         "id": "heading_text_color",
         "label": "Heading Color",
         "default": "#000"
-      }, {
+      },
+      {
         "type": "select",
         "id": "heading_position",
         "label": "Heading position",
@@ -57,6 +71,36 @@
           }
         ],
         "default": "center"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "View all"
+      }, {
+        "type": "color",
+        "id": "button_background-color",
+        "label": "Button Background Color",
+        "default": "#000"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "button_border_color",
+        "label": "Button Border Color",
+        "default": "transparent"
+      }, {
+        "type": "range",
+        "id": "button_border_radius",
+        "min": 6,
+        "max": 150,
+        "step": 1,
+        "unit": "px",
+        "label": "Button Border Radius",
+        "default": 45
       }
     ],
     "presets": [
