@@ -53,6 +53,7 @@
     },
     "9a030c48-c4a0-424c-a34e-e3efcc83d221": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection_id": "end-of-season-sale",
         "product_limit": 8,
