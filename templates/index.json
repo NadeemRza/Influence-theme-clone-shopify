@@ -53,6 +53,7 @@
     },
     "9a030c48-c4a0-424c-a34e-e3efcc83d221": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection_id": "end-of-season-sale",
         "product_limit": 8,
@@ -349,9 +350,9 @@
         "heading_color": "#271e0a",
         "button_text": "SHOP THE SALE",
         "button_background_color": "#271e0a",
-        "button_text_color": "#fff",
+        "button_text_color": "#ffffff",
         "logo_text": "See it styled on Insta",
-        "logo_text_color": "#fff"
+        "logo_text_color": "#ffffff"
       }
     }
   },
