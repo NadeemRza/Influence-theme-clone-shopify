@@ -3,7 +3,7 @@
     {% assign mobile_image = section.settings.image_mobile | default: section.settings.image %}
     {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: section.settings.image %}
     <div class="sales-section__content">
-      <div class="height-full flex column align-start justify-center">
+      <div class="height-full flex column {{section.settings.content_alignment}}">
         <div class="sales-section__content-container">
           <div class="sales-section__content-container-top center">
             <h2 class="heading-{{section.id}}">{{ section.settings.heading_text }}</h2>
@@ -103,7 +103,47 @@
         "id": "logo_text_color",
         "label": "Logo Text Color",
         "default": "#fff"
+      }, {
+        "type": "select",
+        "id": "content_alignment",
+        "label": "Content alignment",
+        "options": [
+          {
+            "value": "align-start justify-start",
+            "label": "Top Left"
+          },
+          {
+            "value": "align-center justify-start",
+            "label": "Top Center"
+          },
+          {
+            "value": "align-end justify-start",
+            "label": "Top Right"
+          },
+          {
+            "value": "align-start justify-center",
+            "label": "Middle Left"
+          }, {
+            "value": "align-center justify-center",
+            "label": "Middle Center"
+          }, {
+            "value": "align-end justify-center",
+            "label": "Middle right"
+          }, {
+            "value": "align-start justify-end",
+            "label": "Bottom Left"
+          }, {
+            "value": "align-center justify-end",
+            "label": "Bottom Center"
+          }, {
+            "value": "align-end justify-end",
+            "label": "Bottom Right"
+          }
+
+        ],
+        "default": "align-center justify-center"
       }
+
     ],
     "presets": [
       {
