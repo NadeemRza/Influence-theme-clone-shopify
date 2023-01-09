@@ -12,14 +12,14 @@
               <h3 class="heading-{{block.id }}">{{ block.settings.heading_text }}</h3>
               <h1 class="para-{{block.id }}">{{ block.settings.para_text }}</h1>
               <div class="button-container">
-                {% if block.settings.button_text_1 != blank and block.settings.button_link_1 != blank %}
+                {% if block.settings.button_text_1 != blank or block.settings.button_link_1 != blank %}
                   <a>
                     <button class="button-{{ block.id }}-1">{{ block.settings.button_text_1 }}</button>
                   </a>
                 {% endif %}
-                {% if block.settings.button_text_2 != blank and block.settings.button_link_2 != blank %}
+                {% if block.settings.button_text_2 != blank or block.settings.button_link_2 != blank %}
                   <a>
-                    <button class="button-{{ block.id }}-2">{{ block.settings.button_text_2 }}</button>
+                    <button class="button-{{ block.id }}-2 button-2">{{ block.settings.button_text_2 }}</button>
                   </a>
                 {% endif %}
               </div>
@@ -37,10 +37,12 @@
       color: {{ block.settings.heading_text_color}}
       ;
     }
+
     .para-{{ block.id}}{
       color: {{ block.settings.para_text_color}}
       ;
     }
+
     .button-{{ block.id}}-1 {
       background-color: {{ block.settings.button_bcg_color_1}}
       ;
@@ -53,7 +55,8 @@
       bodrer-left: 1px solid #ffff;
       border-top: 2px solid #ffff;
     }
-    .button-{{ block.id}}-2 {
+
+    .button-2 {
       background-color: {{ block.settings.button_bcg_color_2}}
       ;
       color: {{ block.settings.button_text_color_2}}
