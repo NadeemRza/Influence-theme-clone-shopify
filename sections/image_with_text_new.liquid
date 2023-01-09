@@ -6,21 +6,23 @@
         {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
       </div>
       <div class="mytext">
-        {% if block.settings.caption_text != blank %}
-          <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
-        {% endif %}
+        <div>
+          {% if block.settings.caption_text != blank %}
+            <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
+          {% endif %}
 
-        {% if block.settings.heading_text != blank %}
-          <h1 class="image-text__heading pt-2 heading-{{block.id}}">{{ block.settings.heading_text }}</h1>
-        {% endif %}
+          {% if block.settings.heading_text != blank %}
+            <h1 class="image-text__heading pt-2 heading-{{block.id}}">{{ block.settings.heading_text }}</h1>
+          {% endif %}
 
-        {% if block.settings.button_link != blank or block.settings.button_text != blank %}
-          <div class="image-text__button pt-2">
-            <a class="button button--primary button-{{block.id}}" href="{{block.settings.button_link}}">
-              {{ block.settings.button_text }}
-            </a>
-          </div>
-        {% endif %}
+          {% if block.settings.button_link != blank or block.settings.button_text != blank %}
+            <div class="image-text__button pt-2">
+              <a class="button button--primary button-{{block.id}}" href="{{block.settings.button_link}}">
+                {{ block.settings.button_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   {% endfor %}
