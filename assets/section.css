@@ -59,11 +59,6 @@ section + section {
     height: 100%;
   }
 
-  .button-container {
-    display: flex;
-    align-items: center;
-  }
-
 /***********************Featured Collection Section******************/
 .featured-collection{
   margin-bottom: 500px;
