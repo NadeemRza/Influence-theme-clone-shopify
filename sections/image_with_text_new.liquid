@@ -1,11 +1,11 @@
-<div>
+<div class="page-width">
   <div class="image_with_text_cont flex">
     {% for block in section.blocks %}
       <div class="myimg">
         {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
         {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
       </div>
-      <div class="mytext">
+      <div class="mytext center">
         <div>
           {% if block.settings.caption_text != blank %}
             <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
@@ -32,6 +32,10 @@
   .image_with_text_cont {
     gap: 2.5rem;
     align-items: center;
+  }
+
+  .image_with_text_cont > * {
+    background: #ece2cc;
   }
 {% endstyle %}
 
