@@ -352,7 +352,35 @@
         "button_background_color": "#271e0a",
         "button_text_color": "#ffffff",
         "logo_text": "See it styled on Insta",
-        "logo_text_color": "#ffffff"
+        "logo_text_color": "#ffffff",
+        "content_alignment": "align-center justify-end"
+      }
+    },
+    "e924896d-0634-4b85-84b9-2445b00f1e38": {
+      "type": "image_with_text_new",
+      "blocks": {
+        "a61b1655-3e8e-4dab-8393-bf5d6cd47b0f": {
+          "type": "content_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imgwt_5e53bfee-4a20-4fb4-9ab1-e0e2c6a559bf.png",
+            "image_position": "img-left",
+            "caption_text": "MAKE A STATEMENT",
+            "caption_text_color": "#271e0a",
+            "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#fff",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "a61b1655-3e8e-4dab-8393-bf5d6cd47b0f"
+      ],
+      "settings": {
+        "content_background_color": "#ece2cc"
       }
     }
   },
@@ -367,6 +395,7 @@
     "1909d765-5894-4518-83b3-85ef0cf843cc",
     "56ae2041-496e-41fc-abb6-242846a77479",
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88",
-    "2fba3a4f-f3e3-4efc-bdb9-2707affffdb3"
+    "2fba3a4f-f3e3-4efc-bdb9-2707affffdb3",
+    "e924896d-0634-4b85-84b9-2445b00f1e38"
   ]
 }
