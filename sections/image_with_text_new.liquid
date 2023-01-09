@@ -1,69 +1,40 @@
-<div class="image-with-text__container">
-  <div class="image-with-text__main-container" data-flickity='{ "cellAlign": "left", "contain": true }'>
-    {% for block in section.blocks %}
-      <div class="image-with-text__container">
-        <div class="flex-box align-center {{block.image_position}} content-background">
-          <div class="flexbox_item">
-            <div class="image-text_image">
-              {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
-              {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
-            </div>
-          </div>
-          <div class="flexbox_item center">
-            <div class="image-text__content {{block.settings.text_alignment}}">
-              {% if block.settings.caption_text != blank %}
-                <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
-              {% endif %}
+<div>
+  <div class="image_with_text_cont flex">
+    <div class="myimg">
+      {% assign mobile_image = block.settings.image_mobile | default: block.settings.image %}
+      {% render 'image', class: '', mobileSrc: mobile_image, desktopSrc: block.settings.image %}
+    </div>
+    <div class="mytext">
+      {% if block.settings.caption_text != blank %}
+        <h4 class="image-text__caption caption-heading-{{block.id}}">{{ block.settings.caption_text }}</h4>
+      {% endif %}
 
-              {% if block.settings.heading_text != blank %}
-                <h1 class="image-text__heading pt-2 heading-{{block.id}}">{{ block.settings.heading_text }}</h1>
-              {% endif %}
+      {% if block.settings.heading_text != blank %}
+        <h1 class="image-text__heading pt-2 heading-{{block.id}}">{{ block.settings.heading_text }}</h1>
+      {% endif %}
 
-              {% if block.settings.button_link != blank or block.settings.button_text != blank %}
-                <div class="image-text__button pt-2">
-                  <a class="button button--primary button-{{block.id}}" href="{{block.settings.button_link}}">
-                    {{ block.settings.button_text }}
-                  </a>
-                </div>
-              {% endif %}
-            </div>
-          </div>
+      {% if block.settings.button_link != blank or block.settings.button_text != blank %}
+        <div class="image-text__button pt-2">
+          <a class="button button--primary button-{{block.id}}" href="{{block.settings.button_link}}">
+            {{ block.settings.button_text }}
+          </a>
         </div>
-      </div>
-    {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </div>
 
 {% style %}
-  .content-background {
-    background-color: {{ section.settings.content_background_color}}
-    ;
+  .image_with_text_cont {
+    gap: 2.5rem;
+    align-items: center;
   }
-
-  {% for block in section.blocks %}
-    .caption-heading-{{ block.id}}{
-      color: {{ block.settings.caption_text_color}}
-      ;
-    }
-
-    .heading-{{ block.id}}{
-      color: {{ block.settings.heading_text_color}}
-      ;
-    }
-
-    .button-{{ block.id}}{
-      background-color: {{ block.settings.button_background_color}}
-      ;
-      color: {{ block.settings.button_text_color}}
-      ;
-      font-weight: semi-bold;
-    }
-  {% endfor %}
 {% endstyle %}
+
 
 {% schema %}
   {
-    "name": "Image With Text 1",
+    "name": "Image With Text New",
     "tag": "section",
     "class": "homepage section",
     "settings": [
@@ -174,7 +145,7 @@
     ],
     "presets": [
       {
-        "name": "Image With Text 1"
+        "name": "Image With Text New"
       }
     ]
   }
