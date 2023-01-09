@@ -1,6 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,8 +12,7 @@
       rel="preconnect"
       href="https://cdn.shopify.com"
       crossorigin>
-    <link
-    rel="preconnect"
+    <link rel="preconnect"
       href="https://fonts.shopifycdn.com"
       crossorigin>
 
@@ -144,7 +146,7 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'section.css' | asset_url | stylesheet_tag }}
     {% render 'judgeme_core' %}
-</head>
+  </head>
 
   <body class="template-{{ template.name }}">
     {% section 'annoucement-bar' %}
@@ -156,5 +158,11 @@
       {{ content_for_layout }}
     </main>
     {% section 'footer' %}
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>
