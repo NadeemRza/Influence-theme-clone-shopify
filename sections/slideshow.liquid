@@ -11,7 +11,7 @@
             <div class="max-width {{ block.settings.text_alignment }}">
               <h3 class="heading-{{block.id }}">{{ block.settings.heading_text }}</h3>
               <h1 class="para-{{block.id }}">{{ block.settings.para_text }}</h1>
-              <div>
+              <div class="button-container">
                 {% if block.settings.button_text_1 != blank and block.settings.button_link_1 != blank %}
                   <a>
                     <button class="button-{{ block.id }}-1">{{ block.settings.button_text_1 }}</button>
@@ -67,153 +67,151 @@
   {% endfor %}
 {% endstyle %}
 
-
-
 {% schema %}
-  {
-    "name": "slideshow",
-    "tag": "section",
-    "class": "slideshow",
-    "max_blocks": 6,
-    "blocks": [
-      {
-        "type": "slideshow-block",
-        "name": "slideshow-block",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image",
-            "info": "1200 x 500px .jpg recommended"
-          },
-          {
-            "type": "image_picker",
-            "id": "image_mobile",
-            "label": "Image (Mobile)",
-            "info": "600 x 800px .jpg recommended"
-          },
-          {
-            "type": "text",
-            "id": "heading_text",
-            "label": "Heading Text",
-            "default": "NEW BASICS"
-          },
-          {
-            "type": "color",
-            "id": "heading_text_color",
-            "label": "Heading Color",
-            "default": "#fff"
-          }, {
-            "type": "text",
-            "id": "para_text",
-            "label": "Pragraph Text",
-            "default": "THE ART OF STYLE"
-          }, {
-            "type": "color",
-            "id": "para_text_color",
-            "label": "Para Color",
-            "default": "#fff"
-          }, {
-            "type": "text",
-            "id": "button_text_1",
-            "label": "Button Text 1",
-            "default": "SHOP NEW IN"
-          }, {
-            "type": "url",
-            "id": "button_link_1",
-            "label": "Button URL 1"
-          }, {
-            "type": "color",
-            "id": "button_bcg_color_1",
-            "label": "Button Background Color 1",
-            "default": "#fff"
-          }, {
-            "type": "color",
-            "id": "button_text_color_1",
-            "label": "Button Text Color 1",
-            "default": "#000"
-          }, {
-            "type": "text",
-            "id": "button_text_2",
-            "label": "Button Text 2",
-            "default": "SHOP ALL"
-          }, {
-            "type": "url",
-            "id": "button_link_2",
-            "label": "Button URL"
-          }, {
-            "type": "color",
-            "id": "button_bcg_color_2",
-            "label": "Button Background Color 2",
-            "default": "transparent"
-          }, {
-            "type": "color",
-            "id": "button_text_color_2",
-            "label": "Button Text Color 2",
-            "default": "#fff"
-          }, {
-            "type": "select",
-            "id": "content_position",
-            "label": "Content position",
-            "options": [
-              {
-                "value": "align-start justify-start",
-                "label": "Top left"
-              },
-              {
-                "value": "align-start justify-center",
-                "label": "Top center"
-              },
-              {
-                "value": "align-start justify-end",
-                "label": "Top right"
-              },
-              {
-                "value": "align-center justify-start",
-                "label": "Middle left"
-              }, {
-                "value": "align-center justify-center",
-                "label": "Middle center"
-              }, {
-                "value": "align-center justify-end",
-                "label": "Middle right"
-              }, {
-                "value": "align-end justify-start",
-                "label": "Bottom left"
-              }, {
-                "value": "align-end justify-center",
-                "label": "Bottom center"
-              }, {
-                "value": "align-end justify-end",
-                "label": "Bottom right"
-              }
-            ],
-            "default": "align-end justify-end"
-          }, {
-            "type": "select",
-            "id": "text_alignment",
-            "label": "Text alignment",
-            "options": [
-              {
-                "value": "text-left",
-                "label": "Left"
-              }, {
-                "value": "text-center",
-                "label": "Center"
-              }, {
-                "value": "text-right",
-                "label": "Right"
-              }
-            ],
-            "default": "text-left"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "slideshow"
-      }
-    ]
-  }
+{
+  "name": "slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "slideshow-block",
+      "name": "slideshow-block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1200 x 500px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)",
+          "info": "600 x 800px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Heading Text",
+          "default": "NEW BASICS"
+        },
+        {
+          "type": "color",
+          "id": "heading_text_color",
+          "label": "Heading Color",
+          "default": "#fff"
+        }, {
+          "type": "text",
+          "id": "para_text",
+          "label": "Pragraph Text",
+          "default": "THE ART OF STYLE"
+        }, {
+          "type": "color",
+          "id": "para_text_color",
+          "label": "Para Color",
+          "default": "#fff"
+        }, {
+          "type": "text",
+          "id": "button_text_1",
+          "label": "Button Text 1",
+          "default": "SHOP NEW IN"
+        }, {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Button URL 1"
+        }, {
+          "type": "color",
+          "id": "button_bcg_color_1",
+          "label": "Button Background Color 1",
+          "default": "#fff"
+        }, {
+          "type": "color",
+          "id": "button_text_color_1",
+          "label": "Button Text Color 1",
+          "default": "#000"
+        }, {
+          "type": "text",
+          "id": "button_text_2",
+          "label": "Button Text 2",
+          "default": "SHOP ALL"
+        }, {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Button URL"
+        }, {
+          "type": "color",
+          "id": "button_bcg_color_2",
+          "label": "Button Background Color 2",
+          "default": "transparent"
+        }, {
+          "type": "color",
+          "id": "button_text_color_2",
+          "label": "Button Text Color 2",
+          "default": "#fff"
+        }, {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+            {
+              "value": "align-start justify-start",
+              "label": "Top left"
+            },
+            {
+              "value": "align-start justify-center",
+              "label": "Top center"
+            },
+            {
+              "value": "align-start justify-end",
+              "label": "Top right"
+            },
+            {
+              "value": "align-center justify-start",
+              "label": "Middle left"
+            }, {
+              "value": "align-center justify-center",
+              "label": "Middle center"
+            }, {
+              "value": "align-center justify-end",
+              "label": "Middle right"
+            }, {
+              "value": "align-end justify-start",
+              "label": "Bottom left"
+            }, {
+              "value": "align-end justify-center",
+              "label": "Bottom center"
+            }, {
+              "value": "align-end justify-end",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "align-end justify-end"
+        }, {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "text-left",
+              "label": "Left"
+            }, {
+              "value": "text-center",
+              "label": "Center"
+            }, {
+              "value": "text-right",
+              "label": "Right"
+            }
+          ],
+          "default": "text-left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "slideshow"
+    }
+  ]
+}
 {% endschema %}
