@@ -12,11 +12,11 @@
             "para_text": "THE ART OF STYLE",
             "para_text_color": "#ffffff",
             "button_text_1": "SHOP NEW IN",
-            "button_link_1": "shopify:\/\/blogs\/news\/technology",
+            "button_link_1": "shopify:\/\/blogs\/influence\/technology",
             "button_bcg_color_1": "#ffffff",
             "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
-            "button_link_2": "shopify:\/\/blogs\/news",
+            "button_link_2": "shopify:\/\/blogs\/influence",
             "button_bcg_color_2": "rgba(0,0,0,0)",
             "button_text_color_2": "#ffffff",
             "content_position": "align-end justify-end",
@@ -36,7 +36,7 @@
             "button_bcg_color_1": "#ffffff",
             "button_text_color_1": "#000000",
             "button_text_2": "SHOP ALL",
-            "button_link_2": "shopify:\/\/blogs\/news\/shopify-course",
+            "button_link_2": "shopify:\/\/blogs\/influence\/shopify-course",
             "button_bcg_color_2": "rgba(0,0,0,0)",
             "button_text_color_2": "#ffffff",
             "content_position": "align-center justify-center",
@@ -167,7 +167,7 @@
             "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
             "heading_text_color": "#271e0a",
             "button_text": "SHOP NOW",
-            "button_link": "shopify:\/\/blogs\/news",
+            "button_link": "shopify:\/\/blogs\/influence",
             "button_background_color": "#271e0a",
             "button_text_color": "#ffffff",
             "text_alignment": "text-right"
@@ -337,7 +337,7 @@
     "b3f82a3f-b785-40f3-b2fd-a3d1e7599f88": {
       "type": "blogpost",
       "settings": {
-        "blog": "news",
+        "blog": "influence",
         "heading_text_color": "#000000",
         "heading_position": "left"
       }
