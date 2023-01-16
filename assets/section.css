@@ -222,7 +222,7 @@ a {
     border-bottom: 2px solid #000;
   }
 
-  .parent:hover .child {
+  .parent:hover + .child {
     display: block;
   }
 

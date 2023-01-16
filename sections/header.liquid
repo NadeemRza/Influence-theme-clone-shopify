@@ -22,6 +22,19 @@
                       {% for grandchild_link in child_link.links %}
                         <li>
                           <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          {% assign fourth_level_handle = child_link.title | handleize | strip %}
+                          <ul class="fouth-level" {{ fourth_level_handle }}>
+                            {% for fourth_level in linklists[fourth_level_handle].links %}
+                              <li>
+                                <a href="{{ fourth_level.url }}">{{ fourth_level.title }}</a>
+
+                                <ul class="fifth level">
+                                  {% for fifth_level in fourth_level.links %}
+                                    <li>
+                                      <a href="{{ fifth_level.url }}">{{ fifth_level.title }}</a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
                         </li>
                       {% endfor %}
                     </ul>
