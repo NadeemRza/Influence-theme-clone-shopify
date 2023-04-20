@@ -131,5 +131,3 @@ Shopify.CountryProvinceSelector.prototype = {
     }
   }
 };
-
-console.log("Hello");
