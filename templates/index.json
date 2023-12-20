@@ -27,15 +27,15 @@
           "type": "slideshow-block",
           "settings": {
             "image": "shopify:\/\/shop_images\/img_main.png",
-            "heading_text": "NEW BASICS",
+            "heading_text": "NEW ADVANCE",
             "heading_text_color": "#ffffff",
-            "para_text": "THE ART OF STYLE",
+            "para_text": "THE ART OF BASIC",
             "para_text_color": "#ffffff",
-            "button_text_1": "SHOP NEW IN",
+            "button_text_1": "EXPLORE",
             "button_link_1": "shopify:\/\/collections",
             "button_bcg_color_1": "#ffffff",
             "button_text_color_1": "#000000",
-            "button_text_2": "SHOP ALL",
+            "button_text_2": "SHOP",
             "button_link_2": "shopify:\/\/blogs\/influence\/shopify-course",
             "button_bcg_color_2": "rgba(0,0,0,0)",
             "button_text_color_2": "#ffffff",
@@ -371,7 +371,7 @@
             "button_text": "SHOP NOW",
             "button_link": "",
             "button_background_color": "#271e0a",
-            "button_text_color": "#fff",
+            "button_text_color": "#ffffff",
             "text_alignment": "center"
           }
         }
