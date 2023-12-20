@@ -162,10 +162,27 @@
             "button_text_color": "#ffffff",
             "text_alignment": "text-right"
           }
+        },
+        "fca50b35-118b-4892-a6ce-7f4651c669ff": {
+          "type": "content_blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image1duo_67dd5f3e-7bc5-46ce-b178-be907e0585ac.png",
+            "image_position": "img-left",
+            "caption_text": "MAKE A STATEMENT",
+            "caption_text_color": "#271e0a",
+            "heading_text": "SHOP OUR NEW UTILITARIAN STYLE",
+            "heading_text_color": "#271e0a",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_background_color": "#271e0a",
+            "button_text_color": "#fff",
+            "text_alignment": "center"
+          }
         }
       },
       "block_order": [
-        "f6c18501-22b9-4e99-be32-3f73bdd11453"
+        "f6c18501-22b9-4e99-be32-3f73bdd11453",
+        "fca50b35-118b-4892-a6ce-7f4651c669ff"
       ],
       "settings": {
         "content_background_color": "#ecf1f5"
