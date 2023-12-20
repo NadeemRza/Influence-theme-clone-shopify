@@ -223,10 +223,38 @@
             "author_info": "Maria Smith",
             "author_city": "London"
           }
+        },
+        "11c9a065-67fe-49d0-bc1b-fc336b779c14": {
+          "type": "review_block",
+          "settings": {
+            "top_heading_text": "DIRECT FROM THE CUSTOMERS",
+            "heading_text": "5 STAR FEEDBACK",
+            "text_alignment": "center",
+            "background_color": "#ece2cc",
+            "author_rating": "5 Star",
+            "paragraph_text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Atque voluptate ullam sint!<\/p>",
+            "author_info": "Maria Smith",
+            "author_city": "London"
+          }
+        },
+        "a65f9c00-b16d-4bb1-b5a4-d06db0ff6701": {
+          "type": "review_block",
+          "settings": {
+            "top_heading_text": "DIRECT FROM THE CUSTOMERS",
+            "heading_text": "5 STAR FEEDBACK",
+            "text_alignment": "center",
+            "background_color": "#ece2cc",
+            "author_rating": "5 Star",
+            "paragraph_text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit Atque voluptate ullam sint!<\/p>",
+            "author_info": "Maria Smith",
+            "author_city": "London"
+          }
         }
       },
       "block_order": [
-        "403dd947-d4a6-4367-9938-8207789bdec2"
+        "403dd947-d4a6-4367-9938-8207789bdec2",
+        "11c9a065-67fe-49d0-bc1b-fc336b779c14",
+        "a65f9c00-b16d-4bb1-b5a4-d06db0ff6701"
       ],
       "settings": {
       }
