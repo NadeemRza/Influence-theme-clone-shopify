@@ -51,16 +51,6 @@
       "settings": {
       }
     },
-    "9a030c48-c4a0-424c-a34e-e3efcc83d221": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "collection_id": "end-of-season-sale",
-        "product_limit": 8,
-        "heading_text_color": "#261d09",
-        "heading_position": "center"
-      }
-    },
     "0827d88e-8db3-43e3-aa47-e634432714e5": {
       "type": "summer-shop",
       "blocks": {
@@ -386,7 +376,6 @@
   },
   "order": [
     "5ffcd0a3-c3b5-4f92-a9f6-e56db37b562d",
-    "9a030c48-c4a0-424c-a34e-e3efcc83d221",
     "0827d88e-8db3-43e3-aa47-e634432714e5",
     "275bbe70-e152-41c7-9d55-77defab557b4",
     "106ac273-8b46-47b2-820c-ddb2ec1497a0",
