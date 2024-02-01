@@ -7,6 +7,7 @@
           "type": "slideshow-block",
           "settings": {
             "image": "shopify:\/\/shop_images\/img_main.png",
+            "image_mobile": "shopify:\/\/shop_images\/image45_20938246-427b-4403-af13-df4f91a0c8ff.png",
             "heading_text": "NEW BASICS",
             "heading_text_color": "#ffffff",
             "para_text": "THE ART OF STYLE",
@@ -175,7 +176,7 @@
             "button_text": "SHOP NOW",
             "button_link": "",
             "button_background_color": "#271e0a",
-            "button_text_color": "#fff",
+            "button_text_color": "#ffffff",
             "text_alignment": "center"
           }
         }
