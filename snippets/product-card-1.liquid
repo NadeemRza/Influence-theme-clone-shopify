@@ -1,5 +1,5 @@
 <div class="product-card flex height--custom">
-  {% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}}, desktopSrc: {{product.featured_image}} %}
+  {% render 'image', class: 'pimg', mobileSrc: product.featured_image, desktopSrc: product.featured_image %}
   <div>
     <h4 class="product-card__heading">{{ product.title }}</h4>
     <p class="mt-1 fw-sb" id="product-card__price">MRP: {{ product.price | money }}
@@ -10,4 +10,15 @@
       {% endif %}
     </p>
   </div>
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}},
+    desktopSrc: {{product.featured_image}} %}"
+  to: "{% render 'image', class: 'pimg', mobileSrc: product.featured_image, desktopSrc:
+    product.featured_image %}"
+  position: 49..155
+{%- endcomment -%}
