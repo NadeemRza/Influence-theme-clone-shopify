@@ -1,5 +1,5 @@
 <div class="product-card flex height--custom">
-  {% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}}, desktopSrc: {{product.featured_image}} %}
+  {% render 'image', class: 'pimg', mobileSrc: product.featured_image, desktopSrc: product.featured_image %}
   <div>
     <h4 class="product-card__heading">{{ product.title }}</h4>
     <p class="mt-1" id="product-card__reviews"><span>5 Star</span> <span id="product-card__reviews-count">54 reviews</span> </p>
@@ -24,4 +24,15 @@
   <div>
     <button class="button button--primary mt-1 product-card__button">Add To Cart</button>
   </div>
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'image', class: 'pimg', mobileSrc: {{product.featured_image}},
+    desktopSrc: {{product.featured_image}} %}"
+  to: "{% render 'image', class: 'pimg', mobileSrc: product.featured_image, desktopSrc:
+    product.featured_image %}"
+  position: 49..155
+{%- endcomment -%}
